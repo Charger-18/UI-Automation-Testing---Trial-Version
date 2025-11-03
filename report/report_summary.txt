@@ -1,0 +1,26 @@
+AIRTEST HTML报告检查汇总
+============================================================
+检查时间: 2025-11-03 13:55:46
+总报告数: 4
+通过报告: 2
+失败报告: 2
+通过率: 50.0%
+元素确认的报告: 2
+
+详细结果:
+1. py_room_report.html:  失败 (元素确认)
+   原因: test_result 为 false
+   文件: py_room_report.html
+--------------------------------------------------
+2. Health_records_report.html:  失败 (元素确认)
+   原因: test_result 为 false
+   文件: Health_records_report.html
+--------------------------------------------------
+3. py_login_report.html:  通过 (元素确认)
+   原因: test_result 为 true
+   文件: py_login_report.html
+--------------------------------------------------
+4. py_friends_report.html:  通过 (元素确认)
+   原因: test_result 为 true
+   文件: py_friends_report.html
+--------------------------------------------------

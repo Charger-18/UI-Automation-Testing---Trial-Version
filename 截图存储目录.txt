@@ -1,0 +1,4 @@
+C:\Users\74515\Desktop\UI自动化测试_体验版\login\log
+C:\Users\74515\Desktop\UI自动化测试_体验版\friends\log
+C:\Users\74515\Desktop\UI自动化测试_体验版\Health_records\log
+C:\Users\74515\Desktop\UI自动化测试_体验版\Room_management\log

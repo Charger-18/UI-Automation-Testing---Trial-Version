@@ -1,0 +1,52 @@
+[2025/10/31 周五 15:45:56.52] 开始自动检查测试报告... 
+正在检查报告目录: C:\Users\74515\Desktop\UI自动化测试_体验版\report 
+开始检查HTML报告目录: C:\Users\74515\Desktop\UI自动化测试_体验版\report
+找到 4 个HTML文件
+正在检查: py_room_report.html
+正在检查: Health_records_report.html
+正在检查: py_friends_report.html
+正在检查: py_login_report.html
+检查完成，共 4 个结果
+结果 1: {'success': True, 'file_path': 'C:\\Users\\74515\\Desktop\\UI自动化测试_体验版\\report\\py_room_report.html', 'test_name': 'py_room_report.html', 'reason': 'test_result 为 true', 'element_found': True}
+结果 2: {'success': False, 'file_path': 'C:\\Users\\74515\\Desktop\\UI自动化测试_体验版\\report\\Health_records_report.html', 'test_name': 'Health_records_report.html', 'reason': 'test_result 为 false', 'element_found': True}
+结果 3: {'success': False, 'file_path': 'C:\\Users\\74515\\Desktop\\UI自动化测试_体验版\\report\\py_friends_report.html', 'test_name': 'py_friends_report.html', 'reason': 'test_result 为 false', 'element_found': True}
+结果 4: {'success': True, 'file_path': 'C:\\Users\\74515\\Desktop\\UI自动化测试_体验版\\report\\py_login_report.html', 'test_name': 'py_login_report.html', 'reason': 'test_result 为 true', 'element_found': True}
+================================================================================
+ AIRTEST HTML报告自动检查结果
+================================================================================
+1. py_room_report.html
+   状态:  通过 
+   原因: test_result 为 true
+   文件: py_room_report.html
+------------------------------------------------------------
+2. Health_records_report.html
+   状态:  失败 
+   原因: test_result 为 false
+   文件: Health_records_report.html
+------------------------------------------------------------
+3. py_friends_report.html
+   状态:  失败 
+   原因: test_result 为 false
+   文件: py_friends_report.html
+------------------------------------------------------------
+4. py_login_report.html
+   状态:  通过 
+   原因: test_result 为 true
+   文件: py_login_report.html
+------------------------------------------------------------
+
+ 汇总统计:
+   总报告数: 4
+   通过报告: 2
+   失败报告: 2
+   通过率: 50.0%
+   元素确认的报告: 2
+   检查时间: 2025-10-31 15:45:56
+================================================================================
+
+ 汇总报告已保存: C:\Users\74515\Desktop\UI自动化测试_体验版\report\report_summary.txt
+
+ 存在失败的测试报告
+ 
+检查完成时间: 2025/10/31 周五 15:45:56.97 
+ 存在失败的测试报告 

@@ -1,0 +1,56 @@
+[2025-10-210周二015:35:40.52] 开始执行所有测试脚本... 
+ 
+[2025-10-210周二015:35:40.52] ========== 开始执行登录测试 ========== 
+[15:35:41][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 192.168.5.63:5555 get-state
+[15:35:41][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 192.168.5.63:5555 connect 192.168.5.63:5555
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\ceshi\login\py_login.py", line 10, in <module>
+    auto_setup(__file__, 
+    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\api.py", line 141, in auto_setup
+    connect_device(dev)
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\utils\logwraper.py", line 134, in wrapper
+    res = f(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\api.py", line 74, in connect_device
+    dev = init_device(platform, uuid, **params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\api.py", line 42, in init_device
+    dev = cls(uuid, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\android\android.py", line 58, in __init__
+    self.adb = ADB(self.serialno, adb_path=adb_path, server_addr=host, display_id=self.display_id, input_event=self.input_event)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\android\adb.py", line 45, in __init__
+    self.connect()
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\android\adb.py", line 288, in connect
+    connect_result = self.cmd("connect %s" % self.serialno)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\android\adb.py", line 226, in cmd
+    stdout = stdout.decode(get_std_encoding(sys.stdout))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 45: illegal multibyte sequence
+[15:35:44][INFO]<airtest.report.report> C:\Users\74515\Desktop\ceshi\report\py_login_report.html
+ 
+[2025-10-210周二015:35:40.52] ========== 开始执行亲友测试 ========== 
+python: can't open file 'C:\\Users\\74515\\Desktop\\ceshi\\friends\\friends.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Scripts\airtest-script.py", line 33, in <module>
+    sys.exit(load_entry_point('airtest==1.3.5', 'console_scripts', 'airtest')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\cli\__main__.py", line 13, in main
+    report_main(args)
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\report\report.py", line 576, in main
+    rpt.report(HTML_TPL, output_file=args.outfile, record_list=record_list)
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\report\report.py", line 538, in report
+    data = self.report_data(output_file=output_file, record_list=record_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\report\report.py", line 482, in report_data
+    info = json.loads(get_script_info(script_path))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\cli\info.py", line 28, in get_script_info
+    with open(pyfilepath, encoding="utf-8") as pyfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'friends.py'
+[2025-10-210周二015:35:40.52] 亲友测试执行失败 

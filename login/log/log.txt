@@ -1,0 +1,1 @@
+{"tag": "function", "depth": 1, "time": 1762156846.416319, "data": {"name": "connect_device", "call_args": {"uri": "android://127.0.0.1:5037/6HU0222721001385?cap_method=ADBCAP&touch_method=MAXTOUCH&"}, "start_time": 1762156846.2065034, "ret": "<Android '6HU0222721001385'>", "end_time": 1762156846.416319}}
