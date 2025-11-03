@@ -492,6 +492,8 @@ def test_Health_Data_info():
 
 
     touch(Template(r"tpl1761725406957.png", threshold=0.9, record_pos=(0.0, -0.769), resolution=(1176, 2480)))
+    sleep(1.0)
+
     assert_not_exists(Template(r"tpl1762156776983.png", record_pos=(0.002, -0.186), resolution=(1176, 2480)), "呼吸周表")
 
 
@@ -502,6 +504,8 @@ def test_Health_Data_info():
     assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
     
     touch(Template(r"tpl1761725467939.png", record_pos=(0.286, -0.766), resolution=(1176, 2480)))
+    sleep(1.0)
+
     assert_not_exists(Template(r"tpl1762156809916.png", record_pos=(0.002, -0.209), resolution=(1176, 2480)), "呼吸月表")
 
     assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
