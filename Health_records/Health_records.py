@@ -88,7 +88,7 @@ def Start_Check():
             print("重新执行后仍然失败，但继续执行后续代码...")
         else:
             print("重新执行后验证成功！")
-Start_Check()
+# Start_Check()
 
 # 进入我的页面
 def Enter_health_record():
@@ -96,7 +96,7 @@ def Enter_health_record():
 
     touch(Template(r"tpl1754380649139.png", record_pos=(-0.356, -0.586), resolution=(1440, 2560)))
     safe_assert_exists(Template(r"tpl1761644104746.png", record_pos=(-0.157, -0.682), resolution=(1176, 2480)), "个人信息显示成功")
-Enter_health_record()
+# Enter_health_record()
 
 # ===========================基础信息=======================
 def test_basic_info():
@@ -213,9 +213,7 @@ def test_basic_info():
         keyevent("KEYCODE_DEL")
     touch(Template(r"tpl1761634233735.png", record_pos=(-0.303, 0.618), resolution=(1176, 2480)))
     touch(Template(r"tpl1761634224301.png", record_pos=(0.001, 0.86), resolution=(1176, 2480)))
-
-
-test_basic_info()
+# test_basic_info()
 
 # ===========================健康信息=======================
 def test_health_info():
@@ -313,7 +311,7 @@ def test_health_info():
 
     assert_exists(Template(r"tpl1761026398483.png", record_pos=(0.347, -0.624), resolution=(1440, 3200)), "健康信息修改成功")
     touch(Template(r"tpl1754647402376.png", threshold=0.8500000000000001, record_pos=(-0.407, -0.897), resolution=(1176, 2480))) 
-test_health_info()
+# test_health_info()
 
 # ===========================用药信息=======================
 def test_medication_info():
@@ -404,265 +402,270 @@ def test_medication_info():
     # 验证删除结果
     assert_not_exists(Template(r"tpl1754649401231.png", threshold=0.95, record_pos=(-0.003, -0.646), resolution=(1176, 2480)), "药品删除成功")
     touch(Template(r"tpl1754649478331.png", threshold=0.9, record_pos=(-0.415, -0.897), resolution=(1176, 2480)))
-test_medication_info()
+# test_medication_info()
 
 # ===========================健康数据=======================
 def test_Health_Data_info():
-    touch(Template(r"tpl1754724200064.png", threshold=0.9000000000000001, record_pos=(-0.313, 0.361), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761874953861.png", threshold=0.9000000000000001, record_pos=(-0.268, -0.685), resolution=(1176, 2480)), "个人信息显示")
+#     touch(Template(r"tpl1754724200064.png", threshold=0.9000000000000001, record_pos=(-0.313, 0.361), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761874953861.png", threshold=0.9000000000000001, record_pos=(-0.268, -0.685), resolution=(1176, 2480)), "个人信息显示")
 
-    assert_exists(Template(r"tpl1754724301859.png", record_pos=(0.237, -0.472), resolution=(1176, 2480)), "性别显示")
+#     assert_exists(Template(r"tpl1754724301859.png", record_pos=(0.237, -0.472), resolution=(1176, 2480)), "性别显示")
 
-    assert_exists(Template(r"tpl1761704903255.png", threshold=0.9, rgb=True, record_pos=(-0.237, -0.48), resolution=(1176, 2480)), "室内卡片")
-    touch(Template(r"tpl1761705935857.png", threshold=0.9, rgb=True, record_pos=(-0.379, 0.22), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761710306900.png", record_pos=(-0.223, -0.074), resolution=(1176, 2480)), "卧室卡片跳转")
+#     assert_exists(Template(r"tpl1761704903255.png", threshold=0.9, rgb=True, record_pos=(-0.237, -0.48), resolution=(1176, 2480)), "室内卡片")
+#     touch(Template(r"tpl1761705935857.png", threshold=0.9, rgb=True, record_pos=(-0.379, 0.22), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761710306900.png", record_pos=(-0.223, -0.074), resolution=(1176, 2480)), "卧室卡片跳转")
 
-    touch(Template(r"tpl1761706025091.png", record_pos=(-0.411, -0.899), resolution=(1176, 2480)))
-    touch(Template(r"tpl1761706035904.png", threshold=0.9, rgb=True, record_pos=(-0.241, 0.222), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761706054245.png", rgb=True, record_pos=(-0.009, -0.186), resolution=(1176, 2480)), "客厅卡片跳转")
-    keyevent("BACK")
-    touch(Template(r"tpl1761706090373.png", record_pos=(-0.103, 0.225), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761706100454.png", rgb=True, record_pos=(-0.068, -0.201), resolution=(1176, 2480)), "卫生间卡片跳转")
-    touch(Template(r"tpl1761706120182.png", record_pos=(-0.211, 0.997), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761706166854.png", record_pos=(0.229, 0.167), resolution=(1176, 2480)), "活动卡片")
-    touch(Template(r"tpl1761710406551.png", record_pos=(0.142, 0.171), resolution=(1176, 2480)))
+#     touch(Template(r"tpl1761706025091.png", record_pos=(-0.411, -0.899), resolution=(1176, 2480)))
+#     touch(Template(r"tpl1761706035904.png", threshold=0.9, rgb=True, record_pos=(-0.241, 0.222), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761706054245.png", rgb=True, record_pos=(-0.009, -0.186), resolution=(1176, 2480)), "客厅卡片跳转")
+#     keyevent("BACK")
+#     touch(Template(r"tpl1761706090373.png", record_pos=(-0.103, 0.225), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761706100454.png", rgb=True, record_pos=(-0.068, -0.201), resolution=(1176, 2480)), "卫生间卡片跳转")
+#     touch(Template(r"tpl1761706120182.png", record_pos=(-0.211, 0.997), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761706166854.png", record_pos=(0.229, 0.167), resolution=(1176, 2480)), "活动卡片")
+#     touch(Template(r"tpl1761710406551.png", record_pos=(0.142, 0.171), resolution=(1176, 2480)))
 
-    safe_assert_exists(Template(r"tpl1761706219292.png", record_pos=(-0.226, -0.142), resolution=(1176, 2480)), "室内活动")
-    safe_assert_exists(Template(r"tpl1761823994978.png", record_pos=(0.003, -0.185), resolution=(1176, 2480)), "室内活动")
-    safe_assert_exists(Template(r"tpl1761890493205.png", record_pos=(-0.077, -0.194), resolution=(1176, 2480)), "室内活动")
+#     safe_assert_exists(Template(r"tpl1761706219292.png", record_pos=(-0.226, -0.142), resolution=(1176, 2480)), "室内活动")
+#     safe_assert_exists(Template(r"tpl1761823994978.png", record_pos=(0.003, -0.185), resolution=(1176, 2480)), "室内活动")
+#     safe_assert_exists(Template(r"tpl1761890493205.png", record_pos=(-0.077, -0.194), resolution=(1176, 2480)), "室内活动")
 
 
-    safe_assert_exists(Template(r"tpl1761724006225.png", record_pos=(0.354, -0.179), resolution=(1176, 2480)), "热力图加载")
+#     safe_assert_exists(Template(r"tpl1761724006225.png", record_pos=(0.354, -0.179), resolution=(1176, 2480)), "热力图加载")
 
-    keyevent("back")
-    touch(Template(r"tpl1761723934115.png", record_pos=(0.333, 0.17), resolution=(1176, 2480)))
+#     keyevent("back")
+#     touch(Template(r"tpl1761723934115.png", record_pos=(0.333, 0.17), resolution=(1176, 2480)))
 
-    assert_exists(Template(r"tpl1761706219292.png", record_pos=(-0.226, -0.142), resolution=(1176, 2480)), "室外活动")
-    assert_exists(Template(r"tpl1761724006225.png", record_pos=(0.354, -0.179), resolution=(1176, 2480)), "热力图加载")
-    keyevent("back")
+#     assert_exists(Template(r"tpl1761706219292.png", record_pos=(-0.226, -0.142), resolution=(1176, 2480)), "室外活动")
+#     assert_exists(Template(r"tpl1761724006225.png", record_pos=(0.354, -0.179), resolution=(1176, 2480)), "热力图加载")
+#     keyevent("back")
     
-    #心率
-    touch(Template(r"tpl1761708769980.png", record_pos=(-0.249, -0.283), resolution=(1176, 2480)))
-    assert_not_exists(Template(r"tpl1761816853068.png", threshold=0.9000000000000001, rgb=True, record_pos=(0.039, -0.045), resolution=(1176, 2480)), "心率数据表")
+#     #心率
+#     touch(Template(r"tpl1761708769980.png", record_pos=(-0.249, -0.283), resolution=(1176, 2480)))
+#     assert_not_exists(Template(r"tpl1761816853068.png", threshold=0.9000000000000001, rgb=True, record_pos=(0.039, -0.045), resolution=(1176, 2480)), "心率数据表")
 
-    assert_exists(Template(r"tpl1761709000988.png", threshold=0.98, record_pos=(-0.312, 0.371), resolution=(1176, 2480)), "日心率范围")
-    assert_not_exists(Template(r"tpl1761709338755.png", threshold=0.98, record_pos=(0.104, 0.422), resolution=(1176, 2480)), "日平均心率")
-    safe_assert_not_exists(Template(r"tpl1761709493726.png", record_pos=(-0.312, 0.684), resolution=(1176, 2480)), "日高心率次数")
-    safe_assert_not_exists(Template(r"tpl1761709500061.png", record_pos=(0.122, 0.689), resolution=(1176, 2480)), "日低心率次数")
-    
-    
-    
-    safe_assert_exists
-    touch(Template(r"tpl1761709072711.png", record_pos=(0.001, -0.769), resolution=(1176, 2480)))
-
-    assert_exists(Template(r"tpl1761724875867.png", threshold=0.9, rgb=True, record_pos=(-0.271, -0.219), resolution=(1176, 2480)), "心率数据周表")
-
-
-
-    
-    assert_exists(Template(r"tpl1761709000988.png", threshold=0.98, record_pos=(-0.312, 0.371), resolution=(1176, 2480)), "周心率范围")
-    assert_not_exists(Template(r"tpl1761709338755.png", threshold=0.98, record_pos=(0.104, 0.422), resolution=(1176, 2480)), "周平均心率")
-    safe_assert_not_exists(Template(r"tpl1761709493726.png", threshold=0.9, record_pos=(-0.312, 0.684), resolution=(1176, 2480)), "周高心率次数")
-    safe_assert_not_exists(Template(r"tpl1761709500061.png", threshold=0.9, record_pos=(0.122, 0.689), resolution=(1176, 2480)), "周低心率次数")
-
-
-    touch(Template(r"tpl1761709128193.png", record_pos=(0.288, -0.764), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761724875867.png", threshold=0.9, rgb=True, record_pos=(-0.271, -0.219), resolution=(1176, 2480)), "心率数据月表")
-    assert_exists(Template(r"tpl1761709000988.png", threshold=0.98, record_pos=(-0.312, 0.371), resolution=(1176, 2480)), "月心率范围")
-    assert_not_exists(Template(r"tpl1761709338755.png", threshold=0.98, record_pos=(0.104, 0.422), resolution=(1176, 2480)), "月平均心率")
-    
-    safe_assert_not_exists(Template(r"tpl1761709493726.png", threshold=0.9, record_pos=(-0.312, 0.684), resolution=(1176, 2480)), "月高心率次数")
-    safe_assert_not_exists(Template(r"tpl1761709500061.png", threshold=0.9, record_pos=(0.122, 0.689), resolution=(1176, 2480)), "月低心率次数")
-
-    keyevent("back")
-
-
-
-    #呼吸
-    assert_not_exists(Template(r"tpl1761816895002.png", record_pos=(0.216, 0.193), resolution=(1176, 2480)), "呼吸卡片")
-
-    touch(Template(r"tpl1761816910097.png", record_pos=(0.139, 0.1), resolution=(1176, 2480)))
-
-    assert_not_exists(Template(r"tpl1761817072759.png", threshold=0.9000000000000001, rgb=True, record_pos=(0.031, -0.046), resolution=(1176, 2480)), "呼吸日表")
-
-    assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
-    assert_not_exists(Template(r"tpl1761725236174.png", threshold=0.98, record_pos=(0.12, 0.431), resolution=(1176, 2480)), "平均呼吸率")
-    assert_not_exists(Template(r"tpl1761725281683.png", threshold=0.98, target_pos=6, record_pos=(-0.298, 0.679), resolution=(1176, 2480)), "高呼吸次数")
-    assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
-
-
-    touch(Template(r"tpl1761725406957.png", threshold=0.9, record_pos=(0.0, -0.769), resolution=(1176, 2480)))
-    sleep(1.0)
-
-    assert_not_exists(Template(r"tpl1762156776983.png", record_pos=(0.002, -0.186), resolution=(1176, 2480)), "呼吸周表")
-
-
-
-    assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
-    assert_not_exists(Template(r"tpl1761725236174.png", threshold=0.98, record_pos=(0.12, 0.431), resolution=(1176, 2480)), "平均呼吸率")
-    assert_not_exists(Template(r"tpl1761725281683.png", threshold=0.98, target_pos=6, record_pos=(-0.298, 0.679), resolution=(1176, 2480)), "高呼吸次数")
-    assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
-    
-    touch(Template(r"tpl1761725467939.png", record_pos=(0.286, -0.766), resolution=(1176, 2480)))
-    sleep(1.0)
-
-    assert_not_exists(Template(r"tpl1762156809916.png", record_pos=(0.002, -0.209), resolution=(1176, 2480)), "呼吸月表")
-
-    assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
-    assert_not_exists(Template(r"tpl1761725236174.png", threshold=0.98, record_pos=(0.12, 0.431), resolution=(1176, 2480)), "平均呼吸率")
-    assert_not_exists(Template(r"tpl1761725281683.png", threshold=0.98, target_pos=6, record_pos=(-0.298, 0.679), resolution=(1176, 2480)), "高呼吸次数")
-    assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
-    keyevent("back")
-
-    
-    swipe(Template(r"tpl1761727121371.png", record_pos=(-0.307, 0.924), resolution=(1176, 2480)), vector=[-0.0077, -0.5788]) 
-#     assert_not_exists(Template(r"tpl1761727220857.png", record_pos=(-0.264, -0.618), resolution=(1176, 2480)), "睡眠卡片")
-    touch(Template(r"tpl1761727241912.png", record_pos=(-0.337, -0.715), resolution=(1176, 2480)))
-#     assert_not_exists(Template(r"tpl1761727250104.png", record_pos=(0.0, -0.325), resolution=(1176, 2480)), "睡眠数据")
-    sleep(1.0)
-
-    touch(Template(r"tpl1761818314315.png", record_pos=(-0.205, 0.997), resolution=(1176, 2480)))
-    sleep(1.0)
-
-
-    
-    touch(Template(r"tpl1761727282455.png", threshold=0.8, record_pos=(0.236, -0.599), resolution=(1176, 2480)))
-    
-    sleep(2.0)
-
-    assert_not_exists(Template(r"tpl1761727339610.png", record_pos=(0.009, -0.221), resolution=(1176, 2480)), "卫生间数据")
-    touch(Template(r"tpl1761727408896.png", record_pos=(0.001, -0.763), resolution=(1176, 2480)))
-
-    assert_exists(Template(r"tpl1761727431845.png", rgb=True, record_pos=(-0.053, -0.147), resolution=(1176, 2480)), "卫生间周数据")
-    touch(Template(r"tpl1761727460502.png", record_pos=(0.294, -0.772), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761727488301.png", rgb=True, record_pos=(0.187, -0.09), resolution=(1176, 2480)), "卫生间月数据")
-    keyevent("back")
-
-    #血氧
-    touch(Template(r"tpl1761727537057.png", record_pos=(-0.241, 0.081), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761803527937.png", record_pos=(0.026, -0.304), resolution=(1176, 2480)), "血氧日数据")
-
-
-    assert_not_exists(Template(r"tpl1761731668251.png", threshold=0.9, record_pos=(0.193, 0.373), resolution=(1176, 2480)), "血氧健康指标")
-
-    assert_not_exists(Template(r"tpl1761731614924.png", threshold=0.9, record_pos=(0.374, 0.679), resolution=(1176, 2480)), "健康指标")
-
-    
-    touch(Template(r"tpl1761731538593.png", record_pos=(0.007, -0.766), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761803527937.png", record_pos=(0.026, -0.304), resolution=(1176, 2480)), "血氧日数据")
-    assert_not_exists(Template(r"tpl1761731668251.png", threshold=0.9, record_pos=(0.193, 0.373), resolution=(1176, 2480)), "血氧健康指标")
-    assert_not_exists(Template(r"tpl1761731614924.png", record_pos=(0.374, 0.679), resolution=(1176, 2480)), "健康指标")
-    touch(Template(r"tpl1761731562823.png", record_pos=(0.292, -0.765), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761803527937.png", record_pos=(0.026, -0.304), resolution=(1176, 2480)), "血氧日数据")
-    assert_not_exists(Template(r"tpl1761731668251.png", threshold=0.9, record_pos=(0.193, 0.373), resolution=(1176, 2480)), "血氧健康指标")
-    assert_not_exists(Template(r"tpl1761731614924.png", record_pos=(0.374, 0.679), resolution=(1176, 2480)), "健康指标")
-    keyevent("back")
-    
-    
-    #运动步数
-    touch(Template(r"tpl1761803631501.png", record_pos=(0.243, 0.105), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761803665679.png", record_pos=(-0.219, -0.267), resolution=(1176, 2480)), "运动日数据")
-    touch(Template(r"tpl1761803685389.png", record_pos=(0.001, -0.769), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761803665679.png", record_pos=(-0.219, -0.267), resolution=(1176, 2480)), "运动周数据")
-    touch(Template(r"tpl1761803689989.png", record_pos=(0.287, -0.774), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761803665679.png", record_pos=(-0.219, -0.267), resolution=(1176, 2480)), "运动月数据")
-    keyevent("back")
+#     assert_exists(Template(r"tpl1761709000988.png", threshold=0.98, record_pos=(-0.312, 0.371), resolution=(1176, 2480)), "日心率范围")
+#     assert_not_exists(Template(r"tpl1761709338755.png", threshold=0.98, record_pos=(0.104, 0.422), resolution=(1176, 2480)), "日平均心率")
+#     safe_assert_not_exists(Template(r"tpl1761709493726.png", record_pos=(-0.312, 0.684), resolution=(1176, 2480)), "日高心率次数")
+#     safe_assert_not_exists(Template(r"tpl1761709500061.png", record_pos=(0.122, 0.689), resolution=(1176, 2480)), "日低心率次数")
     
     
     
-    
-    #血压
-#     assert_not_exists(Template(r"tpl1761803860816.png", record_pos=(0.238, -0.12), resolution=(1176, 2480)), "请填写测试点")
+#     safe_assert_exists
+#     touch(Template(r"tpl1761709072711.png", record_pos=(0.001, -0.769), resolution=(1176, 2480)))
 
-    touch(Template(r"tpl1761805367655.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.253, 0.035), resolution=(1176, 2480)))
-    touch(Template(r"tpl1761805402709.png", record_pos=(-0.003, 0.227), resolution=(1176, 2480)))
-    keyevent("back")
-    sleep(3.0)
-    assert_exists(Template(r"tpl1761805444272.png", record_pos=(-0.292, 0.144), resolution=(1176, 2480)), "新增血压功能")
-    
-    touch(Template(r"tpl1761803905219.png", record_pos=(-0.241, 0.153), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761724875867.png", threshold=0.9, rgb=True, record_pos=(-0.271, -0.219), resolution=(1176, 2480)), "心率数据周表")
 
-    assert_not_exists(Template(r"tpl1761804022293.png", threshold=0.98, rgb=True, record_pos=(0.004, 0.379), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761804632680.png", threshold=0.9500000000000002, rgb=True, record_pos=(-0.247, 0.28), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761804648777.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.243, 0.275), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761805264365.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.179, 0.275), resolution=(1176, 2480)), "请填写测试点")
 
-    touch(Template(r"tpl1761804697084.png", record_pos=(0.382, -0.571), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761804714872.png", record_pos=(-0.003, -0.898), resolution=(1176, 2480)), "新增血压")
-    assert_exists(Template(r"tpl1761804748127.png", record_pos=(-0.004, -0.207), resolution=(1176, 2480)), "新增血压")
-    keyevent("back")
-    
-    touch(Template(r"tpl1761804806363.png", record_pos=(0.001, -0.763), resolution=(1176, 2480)))
-
-    assert_not_exists(Template(r"tpl1761804022293.png", threshold=0.98, rgb=True, record_pos=(0.004, 0.379), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761804632680.png", threshold=0.9500000000000002, rgb=True, record_pos=(-0.247, 0.28), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761804648777.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.243, 0.275), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761805264365.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.179, 0.275), resolution=(1176, 2480)), "请填写测试点")
-
-    touch(Template(r"tpl1761804697084.png", record_pos=(0.382, -0.571), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761804714872.png", record_pos=(-0.003, -0.898), resolution=(1176, 2480)), "新增血压")
-    assert_exists(Template(r"tpl1761804748127.png", record_pos=(-0.004, -0.207), resolution=(1176, 2480)), "新增血压")
-    keyevent("back")
-
-    touch(Template(r"tpl1761804809584.png", record_pos=(0.287, -0.769), resolution=(1176, 2480)))
-#     assert_exists(Template(r"tpl1761804514836.png", record_pos=(-0.029, -0.26), resolution=(1176, 2480)), "血压数据表")
-    assert_not_exists(Template(r"tpl1761804022293.png", threshold=0.98, rgb=True, record_pos=(0.004, 0.379), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761804632680.png", threshold=0.9500000000000002, rgb=True, record_pos=(-0.247, 0.28), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761804648777.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.243, 0.275), resolution=(1176, 2480)), "血压指标")
-    safe_assert_exists(Template(r"tpl1761805264365.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.179, 0.275), resolution=(1176, 2480)), "请填写测试点")
-
-    touch(Template(r"tpl1761804697084.png", record_pos=(0.382, -0.571), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761804714872.png", record_pos=(-0.003, -0.898), resolution=(1176, 2480)), "新增血压")
-    assert_exists(Template(r"tpl1761804748127.png", record_pos=(-0.004, -0.207), resolution=(1176, 2480)), "新增血压")
-    keyevent("back")
-    sleep(1.0)
-
-    keyevent("back")
 
     
-    #血糖
-    touch(Template(r"tpl1761809049925.png", threshold=0.8500000000000001, target_pos=6, record_pos=(0.241, 0.457), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
-    touch(Template(r"tpl1761808923455.png", record_pos=(-0.002, -0.032), resolution=(1176, 2480)))
-    keyevent("back")
-    assert_exists(Template(r"tpl1761808960994.png", record_pos=(0.078, 0.56), resolution=(1176, 2480)), "新增血糖功能")
-    touch(Template(r"tpl1761807765142.png", record_pos=(0.24, 0.15), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808842461.png", record_pos=(0.116, -0.222), resolution=(1176, 2480)), "血糖数据表")
+#     assert_exists(Template(r"tpl1761709000988.png", threshold=0.98, record_pos=(-0.312, 0.371), resolution=(1176, 2480)), "周心率范围")
+#     assert_not_exists(Template(r"tpl1761709338755.png", threshold=0.98, record_pos=(0.104, 0.422), resolution=(1176, 2480)), "周平均心率")
+#     safe_assert_not_exists(Template(r"tpl1761709493726.png", threshold=0.9, record_pos=(-0.312, 0.684), resolution=(1176, 2480)), "周高心率次数")
+#     safe_assert_not_exists(Template(r"tpl1761709500061.png", threshold=0.9, record_pos=(0.122, 0.689), resolution=(1176, 2480)), "周低心率次数")
 
-    assert_not_exists(Template(r"tpl1761807939966.png", threshold=0.98, record_pos=(-0.006, 0.382), resolution=(1176, 2480)), "血糖数据")
-    safe_assert_exists(Template(r"tpl1761807965376.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.071, 0.265), resolution=(1176, 2480)), "血糖指标")
-    safe_assert_exists(Template(r"tpl1761807968894.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.383, 0.266), resolution=(1176, 2480)), "血糖指标")
-    safe_assert_exists(Template(r"tpl1761807972801.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.193, 0.272), resolution=(1176, 2480)), "血糖指标")
-    touch(Template(r"tpl1761808889717.png", record_pos=(0.386, -0.572), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
 
-    keyevent("back")
-
-    touch(Template(r"tpl1761808876810.png", record_pos=(0.004, -0.768), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808842461.png", record_pos=(0.116, -0.222), resolution=(1176, 2480)), "血糖数据表")
-
-    assert_not_exists(Template(r"tpl1761807939966.png", threshold=0.98, record_pos=(-0.006, 0.382), resolution=(1176, 2480)), "血糖数据")
-    safe_assert_exists(Template(r"tpl1761807965376.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.071, 0.265), resolution=(1176, 2480)), "血糖指标")
-    safe_assert_exists(Template(r"tpl1761807968894.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.383, 0.266), resolution=(1176, 2480)), "血糖指标")
-    safe_assert_exists(Template(r"tpl1761807972801.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.193, 0.272), resolution=(1176, 2480)), "血糖指标")
-    touch(Template(r"tpl1761808889717.png", record_pos=(0.386, -0.572), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
-    keyevent("back")
-
-    touch(Template(r"tpl1761808879943.png", record_pos=(0.295, -0.764), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808842461.png", record_pos=(0.116, -0.222), resolution=(1176, 2480)), "血糖数据表")
-
-    assert_not_exists(Template(r"tpl1761807939966.png", threshold=0.98, record_pos=(-0.006, 0.382), resolution=(1176, 2480)), "血糖数据")
-    safe_assert_exists(Template(r"tpl1761807965376.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.071, 0.265), resolution=(1176, 2480)), "血糖指标")
-    safe_assert_exists(Template(r"tpl1761807968894.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.383, 0.266), resolution=(1176, 2480)), "血糖指标")
-    safe_assert_exists(Template(r"tpl1761807972801.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.193, 0.272), resolution=(1176, 2480)), "血糖指标")
-    touch(Template(r"tpl1761808889717.png", record_pos=(0.386, -0.572), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
-    keyevent("back")
-    sleep(2.0)
-    keyevent("back")
+#     touch(Template(r"tpl1761709128193.png", record_pos=(0.288, -0.764), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761724875867.png", threshold=0.9, rgb=True, record_pos=(-0.271, -0.219), resolution=(1176, 2480)), "心率数据月表")
+#     assert_exists(Template(r"tpl1761709000988.png", threshold=0.98, record_pos=(-0.312, 0.371), resolution=(1176, 2480)), "月心率范围")
+#     assert_not_exists(Template(r"tpl1761709338755.png", threshold=0.98, record_pos=(0.104, 0.422), resolution=(1176, 2480)), "月平均心率")
     
-    swipe(Template(r"tpl1761879916842.png", record_pos=(-0.302, 0.556), resolution=(1176, 2480)), vector=[0.0062, -0.3524])
+#     safe_assert_not_exists(Template(r"tpl1761709493726.png", threshold=0.9, record_pos=(-0.312, 0.684), resolution=(1176, 2480)), "月高心率次数")
+#     safe_assert_not_exists(Template(r"tpl1761709500061.png", threshold=0.9, record_pos=(0.122, 0.689), resolution=(1176, 2480)), "月低心率次数")
+
+#     keyevent("back")
+
+
+
+#     #呼吸
+#     assert_not_exists(Template(r"tpl1761816895002.png", record_pos=(0.216, 0.193), resolution=(1176, 2480)), "呼吸卡片")
+
+#     touch(Template(r"tpl1761816910097.png", record_pos=(0.139, 0.1), resolution=(1176, 2480)))
+
+#     assert_not_exists(Template(r"tpl1761817072759.png", threshold=0.9000000000000001, rgb=True, record_pos=(0.031, -0.046), resolution=(1176, 2480)), "呼吸日表")
+
+#     assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
+#     assert_not_exists(Template(r"tpl1761725236174.png", threshold=0.98, record_pos=(0.12, 0.431), resolution=(1176, 2480)), "平均呼吸率")
+#     assert_not_exists(Template(r"tpl1761725281683.png", threshold=0.98, target_pos=6, record_pos=(-0.298, 0.679), resolution=(1176, 2480)), "高呼吸次数")
+#     assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
+
+
+#     touch(Template(r"tpl1761725406957.png", threshold=0.9, record_pos=(0.0, -0.769), resolution=(1176, 2480)))
+#     sleep(1.0)
+
+#     assert_not_exists(Template(r"tpl1762156776983.png", record_pos=(0.002, -0.186), resolution=(1176, 2480)), "呼吸周表")
+
+
+
+#     assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
+#     assert_not_exists(Template(r"tpl1761725236174.png", threshold=0.98, record_pos=(0.12, 0.431), resolution=(1176, 2480)), "平均呼吸率")
+#     assert_not_exists(Template(r"tpl1761725281683.png", threshold=0.98, target_pos=6, record_pos=(-0.298, 0.679), resolution=(1176, 2480)), "高呼吸次数")
+#     assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
+    
+#     touch(Template(r"tpl1761725467939.png", record_pos=(0.286, -0.766), resolution=(1176, 2480)))
+#     sleep(1.0)
+
+#     assert_not_exists(Template(r"tpl1762156809916.png", record_pos=(0.002, -0.209), resolution=(1176, 2480)), "呼吸月表")
+
+#     assert_exists(Template(r"tpl1761725183243.png", threshold=0.9500000000000002, record_pos=(-0.34, 0.365), resolution=(1176, 2480)), "呼吸范围")
+#     assert_not_exists(Template(r"tpl1761725236174.png", threshold=0.98, record_pos=(0.12, 0.431), resolution=(1176, 2480)), "平均呼吸率")
+#     assert_not_exists(Template(r"tpl1761725281683.png", threshold=0.98, target_pos=6, record_pos=(-0.298, 0.679), resolution=(1176, 2480)), "高呼吸次数")
+#     assert_not_exists(Template(r"tpl1761725287470.png", threshold=0.98, record_pos=(0.135, 0.69), resolution=(1176, 2480)), "低呼吸次数")
+#     keyevent("back")
+
+    
+#     swipe(Template(r"tpl1761727121371.png", record_pos=(-0.307, 0.924), resolution=(1176, 2480)), vector=[-0.0077, -0.5788]) 
+# #     assert_not_exists(Template(r"tpl1761727220857.png", record_pos=(-0.264, -0.618), resolution=(1176, 2480)), "睡眠卡片")
+#     touch(Template(r"tpl1761727241912.png", record_pos=(-0.337, -0.715), resolution=(1176, 2480)))
+# #     assert_not_exists(Template(r"tpl1761727250104.png", record_pos=(0.0, -0.325), resolution=(1176, 2480)), "睡眠数据")
+#     sleep(1.0)
+
+#     touch(Template(r"tpl1761818314315.png", record_pos=(-0.205, 0.997), resolution=(1176, 2480)))
+#     sleep(1.0)
+
+
+    
+#     touch(Template(r"tpl1761727282455.png", threshold=0.8, record_pos=(0.236, -0.599), resolution=(1176, 2480)))
+    
+#     sleep(2.0)
+
+#     assert_not_exists(Template(r"tpl1761727339610.png", record_pos=(0.009, -0.221), resolution=(1176, 2480)), "卫生间数据")
+#     touch(Template(r"tpl1761727408896.png", record_pos=(0.001, -0.763), resolution=(1176, 2480)))
+
+#     sleep(1.0)
+
+#     assert_exists(Template(r"tpl1762158790853.png", rgb=True, record_pos=(-0.259, -0.122), resolution=(1176, 2480)), "卫生间周数据")
+
+#     touch(Template(r"tpl1761727460502.png", record_pos=(0.294, -0.772), resolution=(1176, 2480)))
+#     sleep(1.0)
+
+#     assert_exists(Template(r"tpl1761727488301.png", rgb=True, record_pos=(0.187, -0.09), resolution=(1176, 2480)), "卫生间月数据")
+#     keyevent("back")
+
+#     #血氧
+#     touch(Template(r"tpl1761727537057.png", record_pos=(-0.241, 0.081), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761803527937.png", record_pos=(0.026, -0.304), resolution=(1176, 2480)), "血氧日数据")
+
+
+#     assert_not_exists(Template(r"tpl1761731668251.png", threshold=0.9, record_pos=(0.193, 0.373), resolution=(1176, 2480)), "血氧健康指标")
+
+#     assert_not_exists(Template(r"tpl1761731614924.png", threshold=0.9, record_pos=(0.374, 0.679), resolution=(1176, 2480)), "健康指标")
+
+    
+#     touch(Template(r"tpl1761731538593.png", record_pos=(0.007, -0.766), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761803527937.png", record_pos=(0.026, -0.304), resolution=(1176, 2480)), "血氧日数据")
+#     assert_not_exists(Template(r"tpl1761731668251.png", threshold=0.9, record_pos=(0.193, 0.373), resolution=(1176, 2480)), "血氧健康指标")
+#     assert_not_exists(Template(r"tpl1761731614924.png", record_pos=(0.374, 0.679), resolution=(1176, 2480)), "健康指标")
+#     touch(Template(r"tpl1761731562823.png", record_pos=(0.292, -0.765), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761803527937.png", record_pos=(0.026, -0.304), resolution=(1176, 2480)), "血氧日数据")
+#     assert_not_exists(Template(r"tpl1761731668251.png", threshold=0.9, record_pos=(0.193, 0.373), resolution=(1176, 2480)), "血氧健康指标")
+#     assert_not_exists(Template(r"tpl1761731614924.png", record_pos=(0.374, 0.679), resolution=(1176, 2480)), "健康指标")
+#     keyevent("back")
+    
+    
+#     #运动步数
+#     touch(Template(r"tpl1761803631501.png", record_pos=(0.243, 0.105), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761803665679.png", record_pos=(-0.219, -0.267), resolution=(1176, 2480)), "运动日数据")
+#     touch(Template(r"tpl1761803685389.png", record_pos=(0.001, -0.769), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761803665679.png", record_pos=(-0.219, -0.267), resolution=(1176, 2480)), "运动周数据")
+#     touch(Template(r"tpl1761803689989.png", record_pos=(0.287, -0.774), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761803665679.png", record_pos=(-0.219, -0.267), resolution=(1176, 2480)), "运动月数据")
+#     keyevent("back")
+    
+    
+    
+    
+#     #血压
+# #     assert_not_exists(Template(r"tpl1761803860816.png", record_pos=(0.238, -0.12), resolution=(1176, 2480)), "请填写测试点")
+
+#     touch(Template(r"tpl1761805367655.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.253, 0.035), resolution=(1176, 2480)))
+#     touch(Template(r"tpl1761805402709.png", record_pos=(-0.003, 0.227), resolution=(1176, 2480)))
+#     keyevent("back")
+#     sleep(3.0)
+#     assert_exists(Template(r"tpl1761805444272.png", record_pos=(-0.292, 0.144), resolution=(1176, 2480)), "新增血压功能")
+    
+#     touch(Template(r"tpl1761803905219.png", record_pos=(-0.241, 0.153), resolution=(1176, 2480)))
+
+#     assert_not_exists(Template(r"tpl1761804022293.png", threshold=0.98, rgb=True, record_pos=(0.004, 0.379), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761804632680.png", threshold=0.9500000000000002, rgb=True, record_pos=(-0.247, 0.28), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761804648777.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.243, 0.275), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761805264365.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.179, 0.275), resolution=(1176, 2480)), "请填写测试点")
+
+#     touch(Template(r"tpl1761804697084.png", record_pos=(0.382, -0.571), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761804714872.png", record_pos=(-0.003, -0.898), resolution=(1176, 2480)), "新增血压")
+#     assert_exists(Template(r"tpl1761804748127.png", record_pos=(-0.004, -0.207), resolution=(1176, 2480)), "新增血压")
+#     keyevent("back")
+    
+#     touch(Template(r"tpl1761804806363.png", record_pos=(0.001, -0.763), resolution=(1176, 2480)))
+
+#     assert_not_exists(Template(r"tpl1761804022293.png", threshold=0.98, rgb=True, record_pos=(0.004, 0.379), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761804632680.png", threshold=0.9500000000000002, rgb=True, record_pos=(-0.247, 0.28), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761804648777.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.243, 0.275), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761805264365.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.179, 0.275), resolution=(1176, 2480)), "请填写测试点")
+
+#     touch(Template(r"tpl1761804697084.png", record_pos=(0.382, -0.571), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761804714872.png", record_pos=(-0.003, -0.898), resolution=(1176, 2480)), "新增血压")
+#     assert_exists(Template(r"tpl1761804748127.png", record_pos=(-0.004, -0.207), resolution=(1176, 2480)), "新增血压")
+#     keyevent("back")
+
+#     touch(Template(r"tpl1761804809584.png", record_pos=(0.287, -0.769), resolution=(1176, 2480)))
+# #     assert_exists(Template(r"tpl1761804514836.png", record_pos=(-0.029, -0.26), resolution=(1176, 2480)), "血压数据表")
+#     assert_not_exists(Template(r"tpl1761804022293.png", threshold=0.98, rgb=True, record_pos=(0.004, 0.379), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761804632680.png", threshold=0.9500000000000002, rgb=True, record_pos=(-0.247, 0.28), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761804648777.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.243, 0.275), resolution=(1176, 2480)), "血压指标")
+#     safe_assert_exists(Template(r"tpl1761805264365.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.179, 0.275), resolution=(1176, 2480)), "请填写测试点")
+
+#     touch(Template(r"tpl1761804697084.png", record_pos=(0.382, -0.571), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761804714872.png", record_pos=(-0.003, -0.898), resolution=(1176, 2480)), "新增血压")
+#     assert_exists(Template(r"tpl1761804748127.png", record_pos=(-0.004, -0.207), resolution=(1176, 2480)), "新增血压")
+#     keyevent("back")
+#     sleep(1.0)
+
+#     keyevent("back")
+
+    
+#     #血糖
+#     touch(Template(r"tpl1761809049925.png", threshold=0.8500000000000001, target_pos=6, record_pos=(0.241, 0.457), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
+#     touch(Template(r"tpl1761808923455.png", record_pos=(-0.002, -0.032), resolution=(1176, 2480)))
+#     keyevent("back")
+#     assert_exists(Template(r"tpl1761808960994.png", record_pos=(0.078, 0.56), resolution=(1176, 2480)), "新增血糖功能")
+#     touch(Template(r"tpl1761807765142.png", record_pos=(0.24, 0.15), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808842461.png", record_pos=(0.116, -0.222), resolution=(1176, 2480)), "血糖数据表")
+
+#     assert_not_exists(Template(r"tpl1761807939966.png", threshold=0.98, record_pos=(-0.006, 0.382), resolution=(1176, 2480)), "血糖数据")
+#     safe_assert_exists(Template(r"tpl1761807965376.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.071, 0.265), resolution=(1176, 2480)), "血糖指标")
+#     safe_assert_exists(Template(r"tpl1761807968894.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.383, 0.266), resolution=(1176, 2480)), "血糖指标")
+#     safe_assert_exists(Template(r"tpl1761807972801.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.193, 0.272), resolution=(1176, 2480)), "血糖指标")
+#     touch(Template(r"tpl1761808889717.png", record_pos=(0.386, -0.572), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
+
+#     keyevent("back")
+
+#     touch(Template(r"tpl1761808876810.png", record_pos=(0.004, -0.768), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808842461.png", record_pos=(0.116, -0.222), resolution=(1176, 2480)), "血糖数据表")
+
+#     assert_not_exists(Template(r"tpl1761807939966.png", threshold=0.98, record_pos=(-0.006, 0.382), resolution=(1176, 2480)), "血糖数据")
+#     safe_assert_exists(Template(r"tpl1761807965376.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.071, 0.265), resolution=(1176, 2480)), "血糖指标")
+#     safe_assert_exists(Template(r"tpl1761807968894.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.383, 0.266), resolution=(1176, 2480)), "血糖指标")
+#     safe_assert_exists(Template(r"tpl1761807972801.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.193, 0.272), resolution=(1176, 2480)), "血糖指标")
+#     touch(Template(r"tpl1761808889717.png", record_pos=(0.386, -0.572), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
+#     keyevent("back")
+
+#     touch(Template(r"tpl1761808879943.png", record_pos=(0.295, -0.764), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808842461.png", record_pos=(0.116, -0.222), resolution=(1176, 2480)), "血糖数据表")
+
+#     assert_not_exists(Template(r"tpl1761807939966.png", threshold=0.98, record_pos=(-0.006, 0.382), resolution=(1176, 2480)), "血糖数据")
+#     safe_assert_exists(Template(r"tpl1761807965376.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.071, 0.265), resolution=(1176, 2480)), "血糖指标")
+#     safe_assert_exists(Template(r"tpl1761807968894.png", threshold=0.8500000000000001, rgb=True, record_pos=(-0.383, 0.266), resolution=(1176, 2480)), "血糖指标")
+#     safe_assert_exists(Template(r"tpl1761807972801.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.193, 0.272), resolution=(1176, 2480)), "血糖指标")
+#     touch(Template(r"tpl1761808889717.png", record_pos=(0.386, -0.572), resolution=(1176, 2480)))
+#     assert_exists(Template(r"tpl1761808916201.png", record_pos=(0.0, -0.395), resolution=(1176, 2480)), "新增血糖页面")
+#     keyevent("back")
+#     sleep(2.0)
+#     keyevent("back")
+    
+#     swipe(Template(r"tpl1761879916842.png", record_pos=(-0.302, 0.556), resolution=(1176, 2480)), vector=[0.0062, -0.3524])
     
     
     
@@ -676,7 +679,10 @@ def test_Health_Data_info():
     assert_exists(Template(r"tpl1761812772400.png", threshold=0.9500000000000002, record_pos=(-0.364, 0.557), resolution=(1176, 2480)), "请填写测试点")
     touch(Template(r"tpl1761812784826.png", record_pos=(-0.23, 0.574), resolution=(1176, 2480)))
 
-    assert_exists(Template(r"tpl1761890898046.png", threshold=0.8, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+
+    
+
 
     assert_not_exists(Template(r"tpl1761812860352.png", threshold=0.8500000000000001, record_pos=(-0.007, 0.505), resolution=(1176, 2480)), "请填写测试点")
     touch(Template(r"tpl1761812952710.png", record_pos=(0.381, -0.571), resolution=(1176, 2480)))
@@ -686,16 +692,13 @@ def test_Health_Data_info():
 
     keyevent("BACK")
     touch(Template(r"tpl1761813019047.png", threshold=0.9000000000000001, record_pos=(0.114, -0.324), resolution=(1176, 2480)))
-
-
-
-
-    touch(Template(r"tpl1761812878995.png", record_pos=(0.001, -0.766), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761890898046.png", threshold=0.8, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    sleep(1.0)
+    touch(Template(r"tpl1761812878995.png", threshold=0.9000000000000001, record_pos=(0.001, -0.766), resolution=(1176, 2480)))
+    assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
 #     assert_not_exists(Template(r"tpl1761812860352.png", threshold=0.8500000000000001, record_pos=(-0.007, 0.505), resolution=(1176, 2480)), "请填写测试点")
 
     touch(Template(r"tpl1761812883009.png", record_pos=(0.288, -0.763), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761890898046.png", threshold=0.8, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
 #     assert_not_exists(Template(r"tpl1761812860352.png", threshold=0.8500000000000001, record_pos=(-0.007, 0.505), resolution=(1176, 2480)), "请填写测试点")
 
     keyevent("BACK")
@@ -703,7 +706,13 @@ def test_Health_Data_info():
     
     #体重
     touch(Template(r"tpl1761813146535.png", threshold=0.9500000000000002, target_pos=6, record_pos=(0.23, 0.455), resolution=(1176, 2480)))
-    touch(Template(r"tpl1761813161813.png", record_pos=(0.003, -0.146), resolution=(1176, 2480)))
+    touch(Template(r"tpl1762168230428.png", record_pos=(-0.003, -0.526), resolution=(1176, 2480)))
+    for i in range(2):
+        keyevent("KEYCODE_DEL")
+    text("70")
+
+    touch(Template(r"tpl1762168315332.png", record_pos=(0.003, -0.139), resolution=(1176, 2480)))
+
     keyevent("back")
     sleep(1.0)
     touch(Template(r"tpl1761813187142.png", threshold=0.9500000000000002, target_pos=5, record_pos=(0.097, 0.553), resolution=(1176, 2480)))
