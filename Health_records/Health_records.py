@@ -679,7 +679,9 @@ def test_Health_Data_info():
     assert_exists(Template(r"tpl1761812772400.png", threshold=0.9500000000000002, record_pos=(-0.364, 0.557), resolution=(1176, 2480)), "请填写测试点")
     touch(Template(r"tpl1761812784826.png", record_pos=(-0.23, 0.574), resolution=(1176, 2480)))
 
-    assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    safe_assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    assert_not_exists(Template(r"tpl1762171404210.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.001, -0.188), resolution=(1176, 2480)), "体温数据表")
+    
 
     
 
@@ -694,11 +696,15 @@ def test_Health_Data_info():
     touch(Template(r"tpl1761813019047.png", threshold=0.9000000000000001, record_pos=(0.114, -0.324), resolution=(1176, 2480)))
     sleep(1.0)
     touch(Template(r"tpl1761812878995.png", threshold=0.9000000000000001, record_pos=(0.001, -0.766), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    safe_assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    assert_not_exists(Template(r"tpl1762171404210.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.001, -0.188), resolution=(1176, 2480)), "体温数据表")
 #     assert_not_exists(Template(r"tpl1761812860352.png", threshold=0.8500000000000001, record_pos=(-0.007, 0.505), resolution=(1176, 2480)), "请填写测试点")
 
     touch(Template(r"tpl1761812883009.png", record_pos=(0.288, -0.763), resolution=(1176, 2480)))
-    assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+    safe_assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
+
+    assert_not_exists(Template(r"tpl1762171411182.png", threshold=0.95, rgb=True, record_pos=(0.004, -0.19), resolution=(1176, 2480)), "体温数据表")
+
 #     assert_not_exists(Template(r"tpl1761812860352.png", threshold=0.8500000000000001, record_pos=(-0.007, 0.505), resolution=(1176, 2480)), "请填写测试点")
 
     keyevent("BACK")

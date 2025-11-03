@@ -1,7 +1,5 @@
 # Airtest 相关忽略项
-*.png
-*.jpg
-*.jpeg
+
 
 # Python 相关忽略项
 *.pyc
