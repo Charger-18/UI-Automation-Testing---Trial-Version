@@ -165,7 +165,9 @@ class RoomAutomation:
         self.safe_assert_exists(Template(r"tpl1754633495510.png", record_pos=(0.246, -0.668), resolution=(1176, 2480)), "房间名称保存成功")
 
     def _delete_room(self):
-        self.safe_touch(Template(r"tpl1754379559406.png", record_pos=(-0.408, -0.519), resolution=(1440, 2560)))
+        self.safe_touch(Template(r"tpl1762255872557.png", threshold=0.9000000000000001, record_pos=(-0.28, -0.28), resolution=(1176, 2480)))
+
+
         self.safe_touch(Template(r"tpl1754379137666.png", record_pos=(-0.002, 0.836), resolution=(1440, 2560)))
         self.safe_touch(Template(r"tpl1754633725159.png", record_pos=(0.185, 0.052), resolution=(1176, 2480)))
         self.safe_assert_exists(Template(r"tpl1754379151400.png", record_pos=(0.006, -0.336), resolution=(1440, 2560)), "房间删除提示出现")
