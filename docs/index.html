@@ -129,7 +129,7 @@
             <a href="./Health_records.log/log.html" class="report-card">
                 <div class="report-icon">📋</div>
                 <h3>健康档案测试报告</h3>
-                <p class="timestamp">最新更新: 2024年11月</p>
+                <p class="timestamp">最新更新: </p>
                 <p>完整的健康档案模块自动化测试，包含表单填写、数据验证、历史记录查询等完整测试场景。</p>
                 <span class="btn">查看详细报告</span>
             </a>
@@ -137,7 +137,7 @@
             <a href="./py_friends.log/log.html" class="report-card">
                 <div class="report-icon">👥</div>
                 <h3>亲友管理测试报告</h3>
-                <p class="timestamp">最新更新: 2024年11月</p>
+                <p class="timestamp">最新更新: </p>
                 <p>亲友管理功能完整测试，包括添加亲友、编辑信息、删除管理、权限设置等操作流程验证。</p>
                 <span class="btn">查看详细报告</span>
             </a>
@@ -145,7 +145,7 @@
             <a href="./py_login.log/log.html" class="report-card">
                 <div class="report-icon">🔐</div>
                 <h3>登录模块测试报告</h3>
-                <p class="timestamp">最新更新: 2024年11月</p>
+                <p class="timestamp">最新更新: </p>
                 <p>用户登录、登出、密码重置、安全验证等认证功能的完整测试和安全性验证。</p>
                 <span class="btn">查看详细报告</span>
             </a>
@@ -153,7 +153,7 @@
             <a href="./py_room.log/log.html" class="report-card">
                 <div class="report-icon">🏠</div>
                 <h3>房间管理测试报告</h3>
-                <p class="timestamp">最新更新: 2024年11月</p>
+                <p class="timestamp">最新更新: </p>
                 <p>房间创建、配置管理、设备绑定、场景设置等房间管理功能的自动化测试验证。</p>
                 <span class="btn">查看详细报告</span>
             </a>
@@ -161,16 +161,48 @@
             <a href="./py_friends.log/log.html" class="report-card">
                 <div class="report-icon">📱</div>
                 <h3>设备管理测试报告</h3>
-                <p class="timestamp">最新更新: 2024年11月</p>
+                <p class="timestamp">最新更新: </p>
                 <p>设备绑定、解绑操作、状态监控、固件升级等设备管理功能的完整测试流程。</p>
                 <span class="btn">查看详细报告</span>
             </a>
         </div>
 
         <div class="footer">
-            <p>© 2024 Airtest 自动化测试项目 | 最后部署时间: 2024年11月</p>
+            <p> </p>
         </div>
     </div>
+
+    <script>
+    (function(){
+      function pad(n){ return n < 10 ? '0' + n : n; }
+      var now = new Date();
+      var y = now.getFullYear();
+      var m = now.getMonth() + 1;
+      var d = now.getDate();
+      var display = '最新更新: ' + y + '年' + m + '月' + d + '日';
+      var iso = y + '-' + pad(m) + '-' + pad(d);
+
+      document.querySelectorAll('.timestamp').forEach(function(el){
+        // 设置显示文本
+        el.textContent = display;
+        // 如果不是 <time>，用 <time> 替换并设置 datetime
+        if (el.tagName.toLowerCase() !== 'time') {
+          var time = document.createElement('time');
+          time.className = 'timestamp';
+          time.setAttribute('datetime', iso);
+          time.textContent = display;
+          el.parentNode.replaceChild(time, el);
+        } else {
+          el.setAttribute('datetime', iso);
+        }
+      });
+
+      var footer = document.querySelector('.footer p');
+      if (footer) {
+        footer.textContent = '© ' + y + ' Airtest 自动化测试项目 | 最后部署时间: ' + y + '年' + m + '月' + d + '日';
+      }
+    })();
+    </script>
 </body>
 
 </html>
