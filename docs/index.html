@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Airtest 自动化测试报告中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .reports-grid {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .report-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            background: white;
+        }
+
+        .report-icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .report-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .report-card p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .timestamp {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 Airtest 自动化测试报告中心</h1>
+            <p>一站式查看所有模块的测试报告和结果</p>
+        </div>
+
+        <div class="reports-grid">
+            <a href="./docs/Health_records.log/log.html" class="report-card">
+                <div class="report-icon">📋</div>
+                <h3>健康档案测试报告</h3>
+                <p class="timestamp">最新更新: 2024年11月</p>
+                <p>完整的健康档案模块自动化测试，包含表单填写、数据验证、历史记录查询等完整测试场景。</p>
+                <span class="btn">查看详细报告</span>
+            </a>
+
+            <a href="./friends/" class="report-card">
+                <div class="report-icon">👥</div>
+                <h3>亲友管理测试报告</h3>
+                <p class="timestamp">最新更新: 2024年11月</p>
+                <p>亲友管理功能完整测试，包括添加亲友、编辑信息、删除管理、权限设置等操作流程验证。</p>
+                <span class="btn">查看详细报告</span>
+            </a>
+
+            <a href="./login/" class="report-card">
+                <div class="report-icon">🔐</div>
+                <h3>登录模块测试报告</h3>
+                <p class="timestamp">最新更新: 2024年11月</p>
+                <p>用户登录、登出、密码重置、安全验证等认证功能的完整测试和安全性验证。</p>
+                <span class="btn">查看详细报告</span>
+            </a>
+
+            <a href="./Room_management/" class="report-card">
+                <div class="report-icon">🏠</div>
+                <h3>房间管理测试报告</h3>
+                <p class="timestamp">最新更新: 2024年11月</p>
+                <p>房间创建、配置管理、设备绑定、场景设置等房间管理功能的自动化测试验证。</p>
+                <span class="btn">查看详细报告</span>
+            </a>
+
+            <a href="./Device_Management/" class="report-card">
+                <div class="report-icon">📱</div>
+                <h3>设备管理测试报告</h3>
+                <p class="timestamp">最新更新: 2024年11月</p>
+                <p>设备绑定、解绑操作、状态监控、固件升级等设备管理功能的完整测试流程。</p>
+                <span class="btn">查看详细报告</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Airtest 自动化测试项目 | 最后部署时间: 2024年11月</p>
+        </div>
+    </div>
+</body>
+
+</html>
