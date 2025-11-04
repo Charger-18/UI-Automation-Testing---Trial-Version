@@ -674,6 +674,23 @@ class HealthRecordsAutomation:
         keyevent("BACK")
         
         # 体重测试
+        
+        touch(Template(r"tpl1754725031499.png", record_pos=(0.007, 0.86), resolution=(1176, 2480)))
+        touch(Template(r"tpl1761813847926.png", threshold=0.9500000000000002, target_pos=3, record_pos=(0.226, 0.179), resolution=(1176, 2480)))
+        touch(Template(r"tpl1761813882396.png", record_pos=(0.001, 0.861), resolution=(1176, 2480)))
+        sleep(3.0)
+        assert_not_exists(Template(r"tpl1762249610696.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.24, 0.591), resolution=(1176, 2480)), "删除卡片")
+
+        touch(Template(r"tpl1754725031499.png", record_pos=(0.007, 0.86), resolution=(1176, 2480)))
+        touch(Template(r"tpl1761813933472.png", threshold=0.9000000000000001, target_pos=3, record_pos=(-0.227, 0.519), resolution=(1176, 2480)))
+        touch(Template(r"tpl1754725172516.png", record_pos=(0.001, 0.855), resolution=(1176, 2480)))
+
+        assert_exists(Template(r"tpl1762253389656.png", threshold=0.9000000000000001, rgb=True, record_pos=(0.236, 0.59), resolution=(1176, 2480)), "添加卡片")
+
+
+        
+        
+        
         touch(Template(r"tpl1761813146535.png", threshold=0.9500000000000002, target_pos=6, record_pos=(0.23, 0.455), resolution=(1176, 2480)))
         touch(Template(r"tpl1762168230428.png", record_pos=(-0.003, -0.526), resolution=(1176, 2480)))
         for i in range(2):
@@ -693,16 +710,6 @@ class HealthRecordsAutomation:
 
         keyevent("back")
         
-        touch(Template(r"tpl1754725031499.png", record_pos=(0.007, 0.86), resolution=(1176, 2480)))
-        touch(Template(r"tpl1761813847926.png", threshold=0.9500000000000002, target_pos=3, record_pos=(0.226, 0.179), resolution=(1176, 2480)))
-        touch(Template(r"tpl1761813882396.png", record_pos=(0.001, 0.861), resolution=(1176, 2480)))
-        sleep(3.0)
-        assert_not_exists(Template(r"tpl1762249610696.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.24, 0.591), resolution=(1176, 2480)), "删除卡片")
-
-        touch(Template(r"tpl1754725031499.png", record_pos=(0.007, 0.86), resolution=(1176, 2480)))
-        touch(Template(r"tpl1761813933472.png", threshold=0.9000000000000001, target_pos=3, record_pos=(-0.227, 0.519), resolution=(1176, 2480)))
-        touch(Template(r"tpl1754725172516.png", record_pos=(0.001, 0.855), resolution=(1176, 2480)))
-        assert_exists(Template(r"tpl1762249610696.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.24, 0.591), resolution=(1176, 2480)), "添加卡片")
         swipe(Template(r"tpl1754725640899.png", record_pos=(0.132, -0.375), resolution=(1176, 2480)), vector=[0.017, 0.6154])
         touch(Template(r"tpl1754724347578.png", record_pos=(-0.227, -0.248), resolution=(1176, 2480)))
         assert_exists(Template(r"tpl1754724455516.png", record_pos=(-0.128, 0.873), resolution=(1176, 2480)), "跳转健康画像")
