@@ -649,11 +649,11 @@ class HealthRecordsAutomation:
 
         # 体温测试
         touch(Template(r"tpl1761812717900.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.245, 0.455), resolution=(1176, 2480)))
-        assert_exists(Template(r"tpl1761812740910.png", record_pos=(-0.003, -0.897), resolution=(1176, 2480)), "请填写测试点")
-        assert_exists(Template(r"tpl1761812749495.png", record_pos=(-0.004, -0.457), resolution=(1176, 2480)), "请填写测试点")
+        assert_exists(Template(r"tpl1761812740910.png", record_pos=(-0.003, -0.897), resolution=(1176, 2480)), "新增体温")
+        assert_exists(Template(r"tpl1761812749495.png", record_pos=(-0.004, -0.457), resolution=(1176, 2480)), "体温添加页面")
         touch(Template(r"tpl1761812758431.png", record_pos=(-0.004, -0.147), resolution=(1176, 2480)))
         keyevent("back")
-        assert_exists(Template(r"tpl1761812772400.png", threshold=0.9500000000000002, record_pos=(-0.364, 0.557), resolution=(1176, 2480)), "请填写测试点")
+        assert_exists(Template(r"tpl1761812772400.png", threshold=0.9500000000000002, record_pos=(-0.364, 0.557), resolution=(1176, 2480)), "体温添加成功")
         touch(Template(r"tpl1761812784826.png", record_pos=(-0.23, 0.574), resolution=(1176, 2480)))
         self.safe_assert_exists(Template(r"tpl1761890898046.png", threshold=0.7, rgb=True, record_pos=(-0.059, -0.303), resolution=(1176, 2480)), "体温数据表")
         assert_not_exists(Template(r"tpl1762171404210.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.001, -0.188), resolution=(1176, 2480)), "体温数据表")
@@ -682,7 +682,8 @@ class HealthRecordsAutomation:
         touch(Template(r"tpl1762168315332.png", record_pos=(0.003, -0.139), resolution=(1176, 2480)))
         keyevent("back")
         sleep(1.0)
-        touch(Template(r"tpl1761813187142.png", threshold=0.9500000000000002, target_pos=5, record_pos=(0.097, 0.553), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762249587219.png", threshold=0.9500000000000002, record_pos=(0.1, 0.557), resolution=(1176, 2480)))
+
         assert_not_exists(Template(r"tpl1762239852895.png", threshold=0.9000000000000001, rgb=True, record_pos=(-0.008, -0.204), resolution=(1176, 2480)), "日体重数据表")        
         touch(Template(r"tpl1761813401060.png", record_pos=(0.004, -0.766), resolution=(1176, 2480)))
         assert_not_exists(Template(r"tpl1762239852895.png", threshold=0.9000000000000001, rgb=True, record_pos=(-0.008, -0.204), resolution=(1176, 2480)), "周体重数据表")
@@ -696,11 +697,12 @@ class HealthRecordsAutomation:
         touch(Template(r"tpl1761813847926.png", threshold=0.9500000000000002, target_pos=3, record_pos=(0.226, 0.179), resolution=(1176, 2480)))
         touch(Template(r"tpl1761813882396.png", record_pos=(0.001, 0.861), resolution=(1176, 2480)))
         sleep(3.0)
-        assert_not_exists(Template(r"tpl1761813903130.png", threshold=0.9500000000000002, record_pos=(0.235, 0.565), resolution=(1176, 2480)), "删除卡片")
+        assert_not_exists(Template(r"tpl1762249610696.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.24, 0.591), resolution=(1176, 2480)), "删除卡片")
+
         touch(Template(r"tpl1754725031499.png", record_pos=(0.007, 0.86), resolution=(1176, 2480)))
         touch(Template(r"tpl1761813933472.png", threshold=0.9000000000000001, target_pos=3, record_pos=(-0.227, 0.519), resolution=(1176, 2480)))
         touch(Template(r"tpl1754725172516.png", record_pos=(0.001, 0.855), resolution=(1176, 2480)))
-        assert_exists(Template(r"tpl1761813965737.png", threshold=0.9000000000000001, record_pos=(0.24, 0.573), resolution=(1176, 2480)), "请填写测试点")
+        assert_exists(Template(r"tpl1762249610696.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.24, 0.591), resolution=(1176, 2480)), "添加卡片")
         swipe(Template(r"tpl1754725640899.png", record_pos=(0.132, -0.375), resolution=(1176, 2480)), vector=[0.017, 0.6154])
         touch(Template(r"tpl1754724347578.png", record_pos=(-0.227, -0.248), resolution=(1176, 2480)))
         assert_exists(Template(r"tpl1754724455516.png", record_pos=(-0.128, 0.873), resolution=(1176, 2480)), "跳转健康画像")
@@ -763,29 +765,29 @@ class HealthRecordsAutomation:
         sleep(1.0)
         keyevent("back")
 
-
-
     
     # ----------- 医护建议 -------------
     def test_medical_advice_info(self):
         touch(Template(r"tpl1761025383292.png", record_pos=(0.208, 0.6), resolution=(1440, 3200)))
         assert_exists(Template(r"tpl1761025392210.png", record_pos=(0.003, -0.972), resolution=(1440, 3200)), "医护建议页面")
     
+    
+    #运行测试流程
     def run_all_tests(self):
         """运行所有测试流程"""
         try:
-#             print("开始执行回归首页测试...")
-#             self.start_check()
-#             print("开始执行进入我的页面测试...")
-#             self.enter_health_record()
-#             print("开始执行基础信息测试...")
-#             self.test_basic_info()
-#             print("开始执行健康信息测试...")
-#             self.test_health_info()
-#             print("开始执行用药信息测试...")
-#             self.test_medication_info()
+            print("开始执行回归首页测试...")
+            self.start_check()
+            print("开始执行进入我的页面测试...")
+            self.enter_health_record()
+            print("开始执行基础信息测试...")
+            self.test_basic_info()
+            print("开始执行健康信息测试...")
+            self.test_health_info()
+            print("开始执行用药信息测试...")
+            self.test_medication_info()
             print("开始执行健康数据测试...")
-#             self.test_health_data_info()
+            self.test_health_data_info()
             print("开始执行体检报告测试...")
             self.test_medical_examination_report_info()
             print("开始执行健康报告测试...")
@@ -796,7 +798,7 @@ class HealthRecordsAutomation:
         finally:
             # 生成报告
             self.generate_report()
-    
+    # 生成报告
     def generate_report(self):
         old_report = r'C:\Users\74515\Desktop\UI自动化测试_体验版\docs\Health_records.log'
         export_dir = r'C:\Users\74515\Desktop\UI自动化测试_体验版\docs'

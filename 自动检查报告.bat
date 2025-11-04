@@ -5,7 +5,7 @@ setlocal enabledelayedexpansion
 cd /d "%~dp0"
 
 :: ÉèÖÃÄ¿Â¼Â·¾¶
-set "REPORT_DIR=%~dp0report"
+set "REPORT_DIR=%~dp0docs"
 set "LOG_DIR=%~dp0log"
 set "SCRIPT_DIR=%~dp0"
 
