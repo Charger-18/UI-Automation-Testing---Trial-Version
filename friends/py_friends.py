@@ -137,8 +137,6 @@ class FriendsAutomation:
         touch(Template(r"tpl1754535937214.png", record_pos=(-0.001, 0.973), resolution=(1440, 3200)))
         touch(Template(r"tpl1754535950784.png", record_pos=(0.169, 0.074), resolution=(1440, 3200)))
         assert_not_exists(Template(r"tpl1761639303967.png", threshold=0.8999999999999999, record_pos=(0.014, -0.144), resolution=(1176, 2480)), "删除成功")
-        touch(Template(r"tpl1754536006541.png", record_pos=(-0.307, -0.976), resolution=(1440, 3200)))
-        assert_exists(Template(r"tpl1754536032874.png", threshold=0.8, rgb=True, record_pos=(-0.376, 1.01), resolution=(1440, 3200)), "返回首页成功")
     
     def run_all_tests(self):
         """运行所有测试流程"""

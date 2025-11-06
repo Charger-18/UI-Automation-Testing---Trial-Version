@@ -27,6 +27,13 @@ echo [%datetime%] 开始执行所有测试脚本...
 echo [%datetime%] 开始执行所有测试脚本... > "%LOG_FILE%"
 echo. >> "%LOG_FILE%"
 
+
+:: 执行登出测试
+echo ========== 开始执行登出测试 ==========
+echo [%datetime%] ========== 开始执行登出测试 ========== >> "%LOG_FILE%"
+call "%SCRIPT_DIR%\logout\登出测试.bat" >> "%LOG_FILE%" 2>&1
+echo. >> "%LOG_FILE%"
+
 :: 执行登录测试
 echo ========== 开始执行登录测试 ==========
 echo [%datetime%] ========== 开始执行登录测试 ========== >> "%LOG_FILE%"

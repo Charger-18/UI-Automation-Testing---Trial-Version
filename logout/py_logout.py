@@ -10,15 +10,14 @@ import time
 import os
 import shutil
 import stat
-
-
+import sys
 # 设置全局阙值为0.8
 ST.THRESHOLD = 0.8
 # 设置全局的超时时长为60s
 ST.FIND_TIMEOUT = 10
 ST.FIND_TIMEOUT_TMP = 3
 
-class LoginAutomation:
+class LogoutAutomation:
     def __init__(self):
         self.setup_device()
     
@@ -60,11 +59,46 @@ class LoginAutomation:
                 project_root="C:/Users/74515/Desktop/UI自动化测试_体验版/logout"
             )
 
+    def safe_touch(self, template):
+        """安全点击：尝试点击一次，失败时打印日志并返回 False，不中断后续步骤"""
+        try:
+            touch(template)
+            return True
+        except (TargetNotFoundError, AirtestError) as e:
+            print(f"[safe_touch] 点击失败：{e}")
+            return False
+    
+    def safe_assert_exists(self, template, msg=None):
+        """安全断言（仅执行一次，失败不影响测试报告）"""
+        try:
+            assert_exists(template, msg)
+            return True
+        except AssertionError as e:
+            print(f"[safe_assert_exists] 断言失败: {str(e)}")
+            return False
 
+
+
+    # ----------- 回归首页 -------------
+
+    def Back_home(self):
+        self.safe_touch(Template(r"tpl1762401125735.png", threshold=0.9000000000000001, rgb=True, record_pos=(-0.288, -0.901), resolution=(1176, 2480)))
+        # 验证登录状态
+        if not self.safe_assert_exists(Template(r"tpl1762408775593.png", threshold=0.8500000000000001, record_pos=(-0.292, -0.9), resolution=(1176, 2480)), "账号已登录"):
+            print("准备退出")
+            self.check_test_point()
+    # ----------- 状态检查 -------------
+    def check_test_point(self):
+        if self.safe_assert_exists(Template(r"tpl1762410914803.png", record_pos=(-0.031, -0.897), resolution=(1176, 2480)),"已退出登录"):
+            print("检测到‘已退出登录’，跳过后续流程，直接生成报告...")
+            self.generate_report()
+            sys.exit()  # 直接退出整个程序
     # ----------- 退出登录-------------
     def log_out(self):
         touch(Template(r"tpl1754469208242.png", record_pos=(0.369, 1.006), resolution=(1440, 3200)))
         touch(Template(r"tpl1761637806363.png", threshold=0.9000000000000001, record_pos=(0.434, -0.748), resolution=(1176, 2480)))
+        sleep(1.0)
+
         touch(Template(r"tpl1754469240202.png", record_pos=(-0.008, 0.989), resolution=(1440, 3200)))
         touch(Template(r"tpl1754469252935.png", record_pos=(0.169, 0.075), resolution=(1440, 3200)))
         sleep(1.0)
@@ -74,7 +108,7 @@ class LoginAutomation:
     def run_all_tests(self):
         """运行所有测试流程"""
         try:
-
+            self.Back_home()
             print("开始执行退出登录测试...")
             self.log_out()
         
@@ -90,7 +124,7 @@ class LoginAutomation:
         old_report = r'C:\Users\74515\Desktop\UI自动化测试_体验版\docs\py_logout.log'
         export_dir = r'C:\Users\74515\Desktop\UI自动化测试_体验版\docs'
 
-    # ---- 1. 强制删除旧报告目录 ----
+        # ---- 1. 强制删除旧报告目录 ----
         if os.path.exists(old_report):
         # 先把只读属性去掉，再删
             def readonly_handler(func, path, exc_info):
@@ -106,7 +140,9 @@ class LoginAutomation:
 
 # 主程序入口
 if __name__ == "__main__":
-    automation = LoginAutomation()
+    automation = LogoutAutomation()
     automation.run_all_tests()
+
+
 
 

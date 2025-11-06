@@ -383,14 +383,15 @@ class HealthRecordsAutomation:
         # 如果safe_touch返回False，则不执行后续语句
         if self.safe_touch(Template(r"tpl1761705935857.png", threshold=0.9, rgb=True, record_pos=(-0.379, 0.22), resolution=(1176, 2480))):
             assert_exists(Template(r"tpl1761710306900.png", record_pos=(-0.223, -0.074), resolution=(1176, 2480)), "卧室卡片跳转")
-            touch(Template(r"tpl1761706025091.png", record_pos=(-0.411, -0.899), resolution=(1176, 2480)))# 如果safe_touch返回False，则不执行后续语句
-
-        if self.safe_touch(Template(r"tpl1761706035904.png", threshold=0.9, rgb=True, record_pos=(-0.241, 0.222), resolution=(1176, 2480)))
+            touch(Template(r"tpl1761706025091.png", record_pos=(-0.411, -0.899), resolution=(1176, 2480)))# 如果safe_touch返回False，则不执行后续语句            
+        if self.safe_touch(Template(r"tpl1761706035904.png", threshold=0.9, rgb=True, record_pos=(-0.241, 0.222), resolution=(1176, 2480))):
             assert_exists(Template(r"tpl1761706054245.png", rgb=True, record_pos=(-0.009, -0.186), resolution=(1176, 2480)), "客厅卡片跳转")
             keyevent("BACK")
-        if self.safe_touch(Template(r"tpl1761706090373.png", record_pos=(-0.103, 0.225), resolution=(1176, 2480)))
+
+        if self.safe_touch(Template(r"tpl1761706090373.png", record_pos=(-0.103, 0.225), resolution=(1176, 2480))):
             assert_exists(Template(r"tpl1761706100454.png", rgb=True, record_pos=(-0.068, -0.201), resolution=(1176, 2480)), "卫生间卡片跳转")
             touch(Template(r"tpl1761706120182.png", record_pos=(-0.211, 0.997), resolution=(1176, 2480)))
+        
         assert_exists(Template(r"tpl1761706166854.png", record_pos=(0.229, 0.167), resolution=(1176, 2480)), "活动卡片")
 
 
@@ -799,16 +800,16 @@ class HealthRecordsAutomation:
     def run_all_tests(self):
         """运行所有测试流程"""
         try:
-#             print("开始执行回归首页测试...")
-#             self.start_check()
-#             print("开始执行进入我的页面测试...")
-#             self.enter_health_record()
-#             print("开始执行基础信息测试...")
-#             self.test_basic_info()
-#             print("开始执行健康信息测试...")
-#             self.test_health_info()
-#             print("开始执行用药信息测试...")
-#             self.test_medication_info()
+            print("开始执行回归首页测试...")
+            self.start_check()
+            print("开始执行进入我的页面测试...")
+            self.enter_health_record()
+            print("开始执行基础信息测试...")
+            self.test_basic_info()
+            print("开始执行健康信息测试...")
+            self.test_health_info()
+            print("开始执行用药信息测试...")
+            self.test_medication_info()
             print("开始执行健康数据测试...")
             self.test_health_data_info()
             print("开始执行体检报告测试...")
