@@ -54,7 +54,11 @@ echo [%datetime%] ========== 开始执行健康档案测试 ========== >> "%LOG_FILE%"
 call "%SCRIPT_DIR%\Health_records\健康档案.bat" >> "%LOG_FILE%" 2>&1
 echo. >> "%LOG_FILE%"
 
-
+:: 执行登出测试
+echo ========== 开始执行登出测试 ==========
+echo [%datetime%] ========== 开始执行登出测试 ========== >> "%LOG_FILE%"
+call "%SCRIPT_DIR%\logout\登出测试.bat" >> "%LOG_FILE%" 2>&1
+echo. >> "%LOG_FILE%"
 
 
 :: 完成
