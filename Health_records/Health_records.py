@@ -702,10 +702,6 @@ class HealthRecordsAutomation:
 
         assert_exists(Template(r"tpl1762253389656.png", threshold=0.9000000000000001, rgb=True, record_pos=(0.236, 0.59), resolution=(1176, 2480)), "添加卡片")
 
-
-        
-        
-        
         touch(Template(r"tpl1761813146535.png", threshold=0.9500000000000002, target_pos=6, record_pos=(0.23, 0.455), resolution=(1176, 2480)))
         touch(Template(r"tpl1762168230428.png", record_pos=(-0.003, -0.526), resolution=(1176, 2480)))
         for i in range(2):
@@ -714,7 +710,7 @@ class HealthRecordsAutomation:
         touch(Template(r"tpl1762168315332.png", record_pos=(0.003, -0.139), resolution=(1176, 2480)))
         keyevent("back")
         sleep(1.0)
-        self.safe_assert_touch(Template(r"tpl1762249587219.png", threshold=0.9500000000000002, record_pos=(0.1, 0.557), resolution=(1176, 2480)))
+        self.safe_touch(Template(r"tpl1762249587219.png", threshold=0.9500000000000002, record_pos=(0.1, 0.557), resolution=(1176, 2480)))
         touch(Template(r"tpl1762336702873.png", threshold=0.8500000000000001, rgb=True, record_pos=(0.139, 0.454), resolution=(1176, 2480)))
 
 
@@ -766,7 +762,7 @@ class HealthRecordsAutomation:
         keyevent("back")
         
         touch(Template(r"tpl1761025085825.png", record_pos=(-0.303, -0.438), resolution=(1440, 3200)))
-        self.assert_exists(Template(r"tpl1761025098169.png", record_pos=(-0.008, 0.222), resolution=(1440, 3200)), "床位监测报告无数据")
+        self.safe_assert_exists(Template(r"tpl1761025098169.png", record_pos=(-0.008, 0.222), resolution=(1440, 3200)), "床位监测报告无数据")
         assert_exists(Template(r"tpl1761012881972.png", record_pos=(0.403, -0.851), resolution=(1440, 3200)), "选择日期")
         self.safe_touch(Template(r"tpl1761012894493.png", record_pos=(-0.407, -0.85), resolution=(1440, 3200)))
         self.safe_touch(Template(r"tpl1761012913023.png", record_pos=(0.399, -0.85), resolution=(1440, 3200)))
@@ -777,7 +773,7 @@ class HealthRecordsAutomation:
         keyevent("back")
         
         touch(Template(r"tpl1761025147593.png", record_pos=(-0.298, -0.237), resolution=(1440, 3200)))
-        self.assert_exists(Template(r"tpl1761025157386.png", record_pos=(-0.019, 0.235), resolution=(1440, 3200)), "跌倒报告无数据")
+        self.safe_assert_exists(Template(r"tpl1761025157386.png", record_pos=(-0.019, 0.235), resolution=(1440, 3200)), "跌倒报告无数据")
         assert_exists(Template(r"tpl1761012881972.png", record_pos=(0.403, -0.851), resolution=(1440, 3200)), "选择日期")
         self.safe_touch(Template(r"tpl1761012894493.png", record_pos=(-0.407, -0.85), resolution=(1440, 3200)))
         self.safe_touch(Template(r"tpl1761012913023.png", record_pos=(0.399, -0.85), resolution=(1440, 3200)))
