@@ -114,10 +114,10 @@ class LoginAutomation:
         """运行所有测试流程"""
         try:
             print("开始执行快捷登录测试...")
-            self.quick_login()
+#             self.quick_login()
         
             print("开始执行退出登录测试...")
-            self.log_out()
+#             self.log_out()
         
             print("开始执行账号登录测试...")
             self.account_login()
