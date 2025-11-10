@@ -115,6 +115,8 @@ class FriendsAutomation:
         touch(Template(r"tpl1754459812320.png", target_pos=8, record_pos=(-0.326, 0.504), resolution=(1440, 3200)))
         text("儿子")
         touch(Template(r"tpl1761639233201.png", record_pos=(-0.009, -0.423), resolution=(1176, 2480)))
+        sleep(1.0)
+
         touch(Template(r"tpl1761639240018.png", record_pos=(-0.002, 0.909), resolution=(1176, 2480)))
         assert_exists(Template(r"tpl1761639303967.png", record_pos=(0.014, -0.144), resolution=(1176, 2480)), "添加亲友成功")
     
@@ -134,7 +136,10 @@ class FriendsAutomation:
     # ----------- 删除亲友 -------------
     def delete_friends(self):
         touch(Template(r"tpl1761639303967.png", record_pos=(0.014, -0.144), resolution=(1176, 2480)))
-        touch(Template(r"tpl1754535937214.png", record_pos=(-0.001, 0.973), resolution=(1440, 3200)))
+        sleep(1.0)
+        touch(Template(r"tpl1762743038478.png", record_pos=(0.0, 0.844), resolution=(1176, 2480)))
+        sleep(1.0)
+
         touch(Template(r"tpl1754535950784.png", record_pos=(0.169, 0.074), resolution=(1440, 3200)))
         assert_not_exists(Template(r"tpl1761639303967.png", threshold=0.8999999999999999, record_pos=(0.014, -0.144), resolution=(1176, 2480)), "删除成功")
     

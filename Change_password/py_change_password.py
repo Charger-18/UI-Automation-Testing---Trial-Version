@@ -103,27 +103,33 @@ class ChangePasswordAutomation:
         touch(Template(r"tpl1762420857409.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.136, -0.628), resolution=(1176, 2480)))
         text("1234567")
         touch(Template(r"tpl1762431496440.png", record_pos=(-0.331, -0.625), resolution=(1176, 2480)))
+        sleep(1.0)
+        touch(Template(r"tpl1762758662048.png", threshold=0.9500000000000002, record_pos=(-0.003, 0.851), resolution=(1176, 2480)))
 
-        touch(Template(r"tpl1762420880484.png", threshold=0.8, rgb=True, record_pos=(-0.004, 0.855), resolution=(1176, 2480)))
+
         keyevent("back")
 
         touch(Template(r"tpl1762429359221.png", record_pos=(-0.003, 0.855), resolution=(1176, 2480)))
         touch(Template(r"tpl1762429368738.png", record_pos=(0.179, 0.051), resolution=(1176, 2480)))
+        sleep(3.0)
+
         touch(Template(r"tpl1762429413718.png", record_pos=(-0.032, -0.906), resolution=(1176, 2480)))
+        sleep(1.0)
+
         touch(Template(r"tpl1762429421613.png", record_pos=(-0.008, 0.772), resolution=(1176, 2480)))
         touch(Template(r"tpl1762429433633.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.224, -0.173), resolution=(1176, 2480)))
         text("17660700727")
         touch(Template(r"tpl1762429446797.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.203, -0.02), resolution=(1176, 2480)))
-        text("123456")
+        text("123")
         touch(Template(r"tpl1762429509725.png", threshold=0.8, target_pos=4, record_pos=(-0.009, 0.299), resolution=(1176, 2480)))
         touch(Template(r"tpl1762429525869.png", record_pos=(0.001, 0.173), resolution=(1176, 2480)))
         if not self.safe_assert_exists(Template(r"tpl1762429824371.png", record_pos=(0.008, -0.434), resolution=(1176, 2480)), "修改密码成功"):
             assert_not_exists(Template(r"tpl1762430026371.png", record_pos=(0.005, 0.882), resolution=(1176, 2480)), "修改密码失败")
         touch(Template(r"tpl1762430277754.png", threshold=0.8, target_pos=6, record_pos=(-0.277, -0.013), resolution=(1176, 2480)))
-
-        for i in range(6):
+        for i in range(3):
             keyevent("KEYCODE_DEL")
         text("1234567")
+        touch(Template(r"tpl1762429525869.png", record_pos=(0.001, 0.173), resolution=(1176, 2480)))
         assert_exists(Template(r"tpl1762430360611.png", record_pos=(-0.003, 0.87), resolution=(1176, 2480)), "新密码登录成功")
         assert_exists(Template(r"tpl1762430367630.png", record_pos=(-0.371, -0.902), resolution=(1176, 2480)), "新密码登录成功")
     def recovery(self):
@@ -135,7 +141,9 @@ class ChangePasswordAutomation:
         touch(Template(r"tpl1762420857409.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.136, -0.628), resolution=(1176, 2480)))
         text("123456")
         touch(Template(r"tpl1762431496440.png", record_pos=(-0.331, -0.625), resolution=(1176, 2480)))
-        touch(Template(r"tpl1762420880484.png", threshold=0.8, rgb=True, record_pos=(-0.004, 0.855), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762758662048.png", threshold=0.9500000000000002, record_pos=(-0.003, 0.851), resolution=(1176, 2480)))
+
+
         
         
 
