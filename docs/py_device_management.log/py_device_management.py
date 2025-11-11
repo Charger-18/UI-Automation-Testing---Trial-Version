@@ -79,7 +79,7 @@ class device_management:
             print(f"[safe_assert_exists] 断言失败: {str(e)}")
             return False
 
-    def safe_assert_not_exists(template, msg=None):
+    def safe_assert_not_exists(self,template, msg=None):
         """安全否定断言（仅执行一次，失败不影响测试报告）"""
         try:
             assert_not_exists(template, msg)
@@ -109,13 +109,72 @@ class device_management:
     # ====================添加设备=============================
     # def Add_device():
     # ====================查看设备=============================
-    def Monitoring_Data(self):
+    def Breathe_Monitoring_Data(self):
         self.safe_touch(Template(r"tpl1761117722453.png",record_pos=(-0.385, -0.782), resolution=(1440, 3200)))
         self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
         self.safe_assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
         self.safe_assert_not_exists(Template(r"tpl1761115577737.png", threshold=0.95, record_pos=(0.006, -0.225), resolution=(1440, 3200)), "心率数据列表")
         self.self.safe_assert_not_exists(Template(r"tpl1761115582460.png", threshold=0.99, record_pos=(0.006, 0.285), resolution=(1440, 3200)), "呼吸数据列表")
         self.safe_assert_not_exists(Template(r"tpl1761115587330.png", threshold=0.95, record_pos=(0.008, 0.795), resolution=(1440, 3200)), "体动数据列表")
+        
+    def Space_Monitoring_Data(self):
+        self.safe_touch(Template(r"tpl1761117722453.png",record_pos=(-0.385, -0.782), resolution=(1440, 3200)))
+        self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
+        self.safe_assert_not_exists(Template(r"tpl1762763738068.png", threshold=0.9500000000000002, record_pos=(0.01, -0.191), resolution=(1176, 2480)), "目标数量数据列表")
+
+    
+    def Fall_Monitoring_Data(self):
+        self.safe_touch(Template(r"tpl1761117722453.png",record_pos=(-0.385, -0.782), resolution=(1440, 3200)))
+        self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
+        self.safe_assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
+        self.safe_assert_not_exists(Template(r"tpl1762763282397.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.009, -0.185), resolution=(1176, 2480)), "目标距离数据列表")
+
+
+    def Life_Monitoring_Data(self,type):
+        
+        if type == 1 :
+            # 处理床位监护模式
+            if not self.safe_assert_not_exists(Template(r"tpl1762767466459.png", record_pos=(0.42, -0.354), resolution=(1176, 2480)), "床位监护卡片"):
+                assert_not_exists(Template(r"tpl1762767455205.png", record_pos=(0.409, -0.346), resolution=(1176, 2480)), "床位监护卡片")
+
+            assert_not_exists(Template(r"tpl1762767601592.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.002, 0.205), resolution=(1176, 2480)), "呼吸数据列表")
+            swipe(Template(r"tpl1762767690028.png", record_pos=(-0.306, 0.011), resolution=(1176, 2480)), vector=[-0.018, -0.1582])
+
+            assert_not_exists(Template(r"tpl1762767622153.png", threshold=0.9500000000000002, rgb=True, target_pos=5, record_pos=(0.004, 0.388), resolution=(1176, 2480)), "心率数据列表")
+            swipe(Template(r"tpl1762767708892.png", record_pos=(-0.303, 0.202), resolution=(1176, 2480)), vector=[-0.0024, -0.3026])
+
+            assert_not_exists(Template(r"tpl1762767634120.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.003, 0.661), resolution=(1176, 2480)), "目标数量列表")
+
+        elif type == 2 :
+            # 处理人员跟踪模式
+            self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
+            self.safe_assert_not_exists(Template(r"tpl1762763738068.png", threshold=0.9500000000000002, record_pos=(0.01, -0.191), resolution=(1176, 2480)), "目标数量数据列表")
+            
+        elif type == 3 or type == "oxygen_saturation":
+            # 处理跌倒监测模式
+            assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
+            assert_not_exists(Template(r"tpl1762763738068.png", threshold=0.9500000000000002, record_pos=(0.01, -0.191), resolution=(1176, 2480)), "目标数量数据列表")            
+            
+        elif type == 4 or type == "body_temperature":
+            # 处理呼吸睡眠模式
+            if not self.safe_assert_not_exists(Template(r"tpl1762767466459.png", record_pos=(0.42, -0.354), resolution=(1176, 2480)), "床位监护卡片"):
+                assert_not_exists(Template(r"tpl1762767455205.png", record_pos=(0.409, -0.346), resolution=(1176, 2480)), "床位监护卡片")
+
+            assert_not_exists(Template(r"tpl1762767601592.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.002, 0.205), resolution=(1176, 2480)), "呼吸数据列表")
+            swipe(Template(r"tpl1762767690028.png", record_pos=(-0.306, 0.011), resolution=(1176, 2480)), vector=[-0.018, -0.1582])
+
+            assert_not_exists(Template(r"tpl1762767622153.png", threshold=0.9500000000000002, rgb=True, target_pos=5, record_pos=(0.004, 0.388), resolution=(1176, 2480)), "心率数据列表")
+            swipe(Template(r"tpl1762767708892.png", record_pos=(-0.303, 0.202), resolution=(1176, 2480)), vector=[-0.0024, -0.3026])
+
+            assert_not_exists(Template(r"tpl1762767634120.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.003, 0.661), resolution=(1176, 2480)), "目标数量列表")
+            
+        else:
+            raise ValueError(f"不支持的数据类型: {type}，支持的类型有: 1/2/3/4 或 'heart_rate'/'blood_pressure'/'oxygen_saturation'/'body_temperature'")
+            
+            
+        
+        self.safe_assert_not_exists(Template(r"tpl1762763282397.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.009, -0.185), resolution=(1176, 2480)), "目标距离数据列表")
+
 
     def Device_Configuration(self):
         self.safe_touch(Template(r"tpl1761117771638.png",record_pos=(-0.153, -0.783), resolution=(1440, 3200)))
@@ -217,11 +276,7 @@ class device_management:
         try:
 #             self.start_check()
 #             self.Device_Page()
-            self.View_respiratory_equipment()
-            self.start_check()
-            self.start_check()
-            self.start_check()
-            self.start_check()
+            self.Life_Monitoring_Data(3)
 
             print("开始执行退出登录测试...")
 
@@ -265,3 +320,4 @@ if __name__ == "__main__":
 # assert_not_exists(Template(r"tpl1761115577737.png", threshold=0.9, record_pos=(0.006, -0.225), resolution=(1440, 3200)), "心率数据列表")
 # assert_not_exists(Template(r"tpl1761115582460.png", threshold=0.9, record_pos=(0.006, 0.285), resolution=(1440, 3200)), "呼吸数据列表")
 # assert_not_exists(Template(r"tpl1761115587330.png", threshold=0.9, record_pos=(0.008, 0.795), resolution=(1440, 3200)), "体动数据列表")
+
