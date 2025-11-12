@@ -1,0 +1,214 @@
+[2025-11-120周三010:00:24.00] 开始执行所有测试脚本... 
+ 
+[2025-11-120周三010:00:24.00] ========== 开始执行登出测试 ========== 
+[10:00:26][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 wait-for-device
+[10:00:26][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell getprop ro.build.version.sdk
+[10:00:26][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1762401125735.png)
+C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\android\cap_methods\adbcap.py:10: UserWarning: Currently using ADB screenshots, the efficiency may be very low.
+  warnings.warn("Currently using ADB screenshots, the efficiency may be very low.")
+[10:00:26][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:26][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:27][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:27][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.9000000000000001, result={'result': (249, 180), 'rectangle': ((212.312, 148.42399999999998), (212.312, 212.42399999999998), (287.312, 212.42399999999998), (287.312, 148.42399999999998)), 'confidence': 0.999899685382843}
+[10:00:27][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.02 s.
+[10:00:27][DEBUG]<airtest.core.api> match result: {'result': (249, 180), 'rectangle': ((212.312, 148.42399999999998), (212.312, 212.42399999999998), (287.312, 212.42399999999998), (287.312, 148.42399999999998)), 'confidence': 0.999899685382843, 'time': 0.023012161254882812}
+[10:00:27][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ls -l /data/local/tmp/rotationwatcher.jar
+[10:00:27][DEBUG]<airtest.core.android.rotation> install_rotationwatcher skipped
+[10:00:27][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell app_process -Djava.class.path=/data/local/tmp/rotationwatcher.jar /data/local/tmp com.example.rotationwatcher.Main
+[10:00:27][DEBUG]<airtest.utils.nbsp> [rotation_server]b'0'
+[10:00:28][INFO]<airtest.core.android.rotation> update orientation None->0
+[10:00:28][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell wm size
+[10:00:28][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell getprop ro.sf.lcd_density
+[10:00:28][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell dumpsys SurfaceFlinger
+[10:00:28][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell dumpsys input
+[10:00:28][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell getevent -p
+[10:00:28][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ls -l /data/local/tmp/maxpresent.jar
+[10:00:29][DEBUG]<airtest.core.android.touch_methods.maxtouch> install_maxtouch skipped
+[10:00:29][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 forward --no-rebind tcp:18750 localabstract:maxpresent_18750
+[10:00:29][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell app_process -Djava.class.path=/data/local/tmp/maxpresent.jar /data/local/tmp com.netease.maxpresent.MaxPresent socket maxpresent_18750
+[10:00:29][DEBUG]<airtest.utils.nbsp> [airtouch_server]b'Metrics Message : 2480.0=====1176.0'
+[10:00:29][DEBUG]<airtest.utils.nbsp> [airtouch_server]b'Start local socket (maxpresent_18750) server...'
+[10:00:29][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1762408775593.png)
+[10:00:29][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:30][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:30][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8500000000000001, result={'result': (245, 183), 'rectangle': ((225.608, 156.5999999999999), (225.608, 209.5999999999999), (264.608, 209.5999999999999), (264.608, 156.5999999999999)), 'confidence': 0.9935474395751953}
+[10:00:30][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.00 s.
+[10:00:30][DEBUG]<airtest.core.api> match result: {'result': (245, 183), 'rectangle': ((225.608, 156.5999999999999), (225.608, 209.5999999999999), (264.608, 209.5999999999999), (264.608, 156.5999999999999)), 'confidence': 0.9935474395751953, 'time': 0.002312898635864258}
+[10:00:30][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1754469208242.png)
+[10:00:30][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:31][DEBUG]<airtest.core.api> resize: (114, 151)->(93, 123), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:31][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:31][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (1015, 2330), 'rectangle': ((980.944, 2284.056), (980.944, 2377.056), (1050.944, 2377.056), (1050.944, 2284.056)), 'confidence': 0.3516826927661896}
+[10:00:31][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.08 s.
+[10:00:31][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:00:31][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.8, result={'result': (1022, 2269), 'rectangle': ((976, 2208), (976, 2331), (1069, 2331), (1069, 2208)), 'confidence': 0.756072461605072}
+[10:00:31][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.05 s.
+[10:00:31][DEBUG]<airtest.core.api> try match with SIFTMatching
+[10:00:31][DEBUG]<airtest.aircv.keypoint_base> [SIFT] threshold=0.8, result={'result': (115, 993), 'rectangle': [(26, 850), (26, 1137), (205, 1137), (205, 850)], 'confidence': 0.6340820640325546}
+[10:00:31][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.48 s.
+[10:00:31][DEBUG]<airtest.core.api> try match with BRISKMatching
+[10:00:31][DEBUG]<airtest.aircv.keypoint_base> [BRISK] threshold=0.8, result={'result': [1025, 2260], 'rectangle': [(965, 2178), (965, 2342), (1084, 2342), (1084, 2178)], 'confidence': 0.8050402402877808}
+[10:00:31][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.14 s.
+[10:00:31][DEBUG]<airtest.core.api> match result: {'result': [1025, 2260], 'rectangle': [(965, 2178), (965, 2342), (1084, 2342), (1084, 2178)], 'confidence': 0.8050402402877808, 'time': 0.14405393600463867}
+[10:00:32][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1761637806363.png)
+[10:00:32][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:32][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:32][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.9000000000000001, result={'result': (1098, 360), 'rectangle': ((1073.384, 329.352), (1073.384, 391.352), (1123.384, 391.352), (1123.384, 329.352)), 'confidence': 0.9979922771453857}
+[10:00:32][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.02 s.
+[10:00:32][DEBUG]<airtest.core.api> match result: {'result': (1098, 360), 'rectangle': ((1073.384, 329.352), (1073.384, 391.352), (1123.384, 391.352), (1123.384, 329.352)), 'confidence': 0.9979922771453857, 'time': 0.022019386291503906}
+[10:00:33][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1754469240202.png)
+[10:00:33][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:34][DEBUG]<airtest.core.api> resize: (1330, 158)->(1086, 129), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:34][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:34][DEBUG]<airtest.core.api> 'error: in template match, found im_search bigger than im_source.'
+[10:00:34][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:00:34][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.8, result={'result': (581, 2243), 'rectangle': ((38, 2179), (38, 2308), (1124, 2308), (1124, 2179)), 'confidence': 0.7575260996818542}
+[10:00:34][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.11 s.
+[10:00:34][DEBUG]<airtest.core.api> try match with SIFTMatching
+[10:00:34][DEBUG]<airtest.aircv.keypoint_base> [SIFT] threshold=0.8, result={'result': (667, 2253), 'rectangle': [(65, 2181), (65, 2326), (1175, 2326), (1175, 2181)], 'confidence': 0.8969857096672058}
+[10:00:34][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.45 s.
+[10:00:34][DEBUG]<airtest.core.api> match result: {'result': (667, 2253), 'rectangle': [(65, 2181), (65, 2326), (1175, 2326), (1175, 2181)], 'confidence': 0.8969857096672058, 'time': 0.45409560203552246}
+[10:00:35][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1754469252935.png)
+[10:00:35][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:35][DEBUG]<airtest.core.api> resize: (439, 154)->(358, 125), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:35][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:36][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (805, 1298), 'rectangle': ((608.744, 1230.2), (608.744, 1367.2), (1001.744, 1367.2), (1001.744, 1230.2)), 'confidence': 0.9397358894348145}
+[10:00:36][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.90 s.
+[10:00:36][DEBUG]<airtest.core.api> match result: {'result': (805, 1298), 'rectangle': ((608.744, 1230.2), (608.744, 1367.2), (1001.744, 1367.2), (1001.744, 1230.2)), 'confidence': 0.9397358894348145, 'time': 0.9014878273010254}
+[10:00:37][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\logout\tpl1754469264876.png)
+[10:00:37][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:38][DEBUG]<airtest.core.api> resize: (138, 77)->(112, 62), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:38][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:38][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.9500000000000002, result={'result': (605, 178), 'rectangle': ((535.4, 139), (535.4, 217), (675.4, 217), (675.4, 139)), 'confidence': 0.5017394423484802}
+[10:00:38][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.04 s.
+[10:00:38][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:00:38][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.9500000000000002, result={'result': (946, 755), 'rectangle': ((890, 724), (890, 786), (1002, 786), (1002, 724)), 'confidence': 0.4110473096370697}
+[10:00:38][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.08 s.
+[10:00:38][DEBUG]<airtest.core.api> try match with SIFTMatching
+[10:00:38][DEBUG]<airtest.aircv.keypoint_base> [SIFT] threshold=0.9500000000000002, result={'result': (203, 778), 'rectangle': [(131, 739), (131, 818), (275, 818), (275, 739)], 'confidence': 0.8553034365177155}
+[10:00:38][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.46 s.
+[10:00:38][DEBUG]<airtest.core.api> try match with BRISKMatching
+[10:00:38][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.08 s.
+[10:00:38][DEBUG]<airtest.core.api> match result: None
+[10:00:39][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:39][DEBUG]<airtest.core.api> resize: (138, 77)->(112, 62), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:39][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:39][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.9500000000000002, result={'result': (553, 177), 'rectangle': ((491.4, 143), (491.4, 212), (615.4, 212), (615.4, 143)), 'confidence': 0.9302801489830017}
+[10:00:39][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.04 s.
+[10:00:39][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:00:39][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.9500000000000002, result={'result': (219, 178), 'rectangle': ((163, 147), (163, 209), (275, 209), (275, 147)), 'confidence': 0.5144222378730774}
+[10:00:39][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.07 s.
+[10:00:39][DEBUG]<airtest.core.api> try match with SIFTMatching
+[10:00:40][DEBUG]<airtest.aircv.keypoint_base> [SIFT] threshold=0.9500000000000002, result={'result': (551, 175), 'rectangle': [(490, 141), (490, 210), (612, 210), (612, 141)], 'confidence': 0.9662132859230042}
+[10:00:40][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.48 s.
+[10:00:40][DEBUG]<airtest.core.api> match result: {'result': (551, 175), 'rectangle': [(490, 141), (490, 210), (612, 210), (612, 141)], 'confidence': 0.9662132859230042, 'time': 0.48120570182800293}
+[10:00:42][INFO]<airtest.report.report> C:\Users\74515\Desktop\UI自动化测试_体验版\docs\py_logout.log\log.html
+no cmdline args
+开始执行退出登录测试...
+所有测试执行完成！
+[10:00:42][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 forward --remove tcp:18750
+[10:00:42][DEBUG]<airtest.utils.nbsp> [rotation_server]b''
+[10:00:42][DEBUG]<airtest.utils.nbsp> [airtouch_server]b''
+[10:00:42][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 forward --remove tcp:18750
+ 
+[2025-11-120周三010:00:24.00] ========== 开始执行登录测试 ========== 
+[10:00:44][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 wait-for-device
+[10:00:44][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell getprop ro.build.version.sdk
+[10:00:44][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1754463699535.png)
+C:\Users\74515\AppData\Local\Programs\Python\Python311\Lib\site-packages\airtest\core\android\cap_methods\adbcap.py:10: UserWarning: Currently using ADB screenshots, the efficiency may be very low.
+  warnings.warn("Currently using ADB screenshots, the efficiency may be very low.")
+[10:00:44][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:45][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:46][DEBUG]<airtest.core.api> resize: (128, 80)->(104, 65), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:46][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:46][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (557, 183), 'rectangle': ((499.928, 147), (499.928, 219), (614.928, 219), (614.928, 147)), 'confidence': 0.9155110120773315}
+[10:00:46][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.04 s.
+[10:00:46][DEBUG]<airtest.core.api> match result: {'result': (557, 183), 'rectangle': ((499.928, 147), (499.928, 219), (614.928, 219), (614.928, 147)), 'confidence': 0.9155110120773315, 'time': 0.03917551040649414}
+[10:00:46][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ls -l /data/local/tmp/rotationwatcher.jar
+[10:00:46][DEBUG]<airtest.core.android.rotation> install_rotationwatcher skipped
+[10:00:46][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell app_process -Djava.class.path=/data/local/tmp/rotationwatcher.jar /data/local/tmp com.example.rotationwatcher.Main
+[10:00:46][DEBUG]<airtest.utils.nbsp> [rotation_server]b'0'
+[10:00:47][INFO]<airtest.core.android.rotation> update orientation None->0
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell wm size
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell getprop ro.sf.lcd_density
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell dumpsys SurfaceFlinger
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell dumpsys input
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell getevent -p
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ls -l /data/local/tmp/maxpresent.jar
+[10:00:47][DEBUG]<airtest.core.android.touch_methods.maxtouch> install_maxtouch skipped
+[10:00:47][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 forward --no-rebind tcp:13075 localabstract:maxpresent_13075
+[10:00:48][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell app_process -Djava.class.path=/data/local/tmp/maxpresent.jar /data/local/tmp com.netease.maxpresent.MaxPresent socket maxpresent_13075
+[10:00:48][DEBUG]<airtest.utils.nbsp> [airtouch_server]b'Metrics Message : 2480.0=====1176.0'
+[10:00:48][DEBUG]<airtest.utils.nbsp> [airtouch_server]b'Start local socket (maxpresent_13075) server...'
+[10:00:49][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1761637405710.png)
+[10:00:49][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:49][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:50][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (582, 2154), 'rectangle': ((477.12, 2084.752), (477.12, 2224.752), (687.12, 2224.752), (687.12, 2084.752)), 'confidence': 0.9987033605575562}
+[10:00:50][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.15 s.
+[10:00:50][DEBUG]<airtest.core.api> match result: {'result': (582, 2154), 'rectangle': ((477.12, 2084.752), (477.12, 2224.752), (687.12, 2224.752), (687.12, 2084.752)), 'confidence': 0.9987033605575562, 'time': 0.1528463363647461}
+[10:00:50][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1754474063060.png)
+[10:00:50][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:50][DEBUG]<airtest.core.api> resize: (419, 102)->(342, 83), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:50][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:51][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (330, 1039), 'rectangle': ((144, 994.2239999999999), (144, 1084.224), (517, 1084.224), (517, 994.2239999999999)), 'confidence': 0.8403158187866211}
+[10:00:51][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.61 s.
+[10:00:51][DEBUG]<airtest.core.api> match result: {'result': (330, 1039), 'rectangle': ((144, 994.2239999999999), (144, 1084.224), (517, 1084.224), (517, 994.2239999999999)), 'confidence': 0.8403158187866211, 'time': 0.6131727695465088}
+[10:00:51][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell dumpsys package com.netease.nie.yosemite
+[10:00:51][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell settings get secure default_input_method
+[10:00:52][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ime list -a
+[10:00:52][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ime enable com.netease.nie.yosemite/.ime.ImeService
+[10:00:52][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ime set com.netease.nie.yosemite/.ime.ImeService
+[10:00:52][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell dumpsys package com.netease.nie.yosemite
+[10:00:52][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 forward tcp:18323 tcp:8181
+[10:00:53][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell settings get secure default_input_method
+[10:00:53][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell ime list -a
+[10:00:53][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 forward --remove tcp:18323
+[10:00:53][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell am broadcast -a ADB_INPUT_TEXT --es msg 17660700727
+[10:00:53][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell input keyevent ENTER
+[10:00:54][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1754474086904.png)
+[10:00:54][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:54][DEBUG]<airtest.core.api> resize: (448, 118)->(365, 96), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:54][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:55][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (355, 1220), 'rectangle': ((154, 1167.04), (154, 1273.04), (556, 1273.04), (556, 1167.04)), 'confidence': 0.8759399056434631}
+[10:00:55][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.83 s.
+[10:00:55][DEBUG]<airtest.core.api> match result: {'result': (355, 1220), 'rectangle': ((154, 1167.04), (154, 1273.04), (556, 1273.04), (556, 1167.04)), 'confidence': 0.8759399056434631, 'time': 0.833322286605835}
+[10:00:55][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell am broadcast -a ADB_INPUT_TEXT --es msg 123456
+[10:00:55][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell input keyevent ENTER
+[10:00:55][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1754474149149.png)
+[10:00:55][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:56][DEBUG]<airtest.core.api> resize: (834, 65)->(681, 53), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:56][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:57][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (584, 1592), 'rectangle': ((211, 1564.08), (211, 1621.08), (957, 1621.08), (957, 1564.08)), 'confidence': 0.6633844375610352}
+[10:00:57][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.54 s.
+[10:00:57][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:00:57][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.8, result={'result': (450, 1404), 'rectangle': ((110, 1378), (110, 1431), (791, 1431), (791, 1378)), 'confidence': 0.3452005088329315}
+[10:00:57][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.06 s.
+[10:00:57][DEBUG]<airtest.core.api> try match with SIFTMatching
+[10:00:57][DEBUG]<airtest.aircv.keypoint_base> [SIFT] threshold=0.8, result={'result': (583, 1592), 'rectangle': [(203, 1563), (203, 1621), (964, 1621), (964, 1563)], 'confidence': 0.8398377001285553}
+[10:00:57][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.60 s.
+[10:00:57][DEBUG]<airtest.core.api> match result: {'result': (583, 1592), 'rectangle': [(203, 1563), (203, 1621), (964, 1621), (964, 1563)], 'confidence': 0.8398377001285553, 'time': 0.59855055809021}
+[10:00:57][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1754545318031.png)
+[10:00:57][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:00:58][DEBUG]<airtest.core.api> resize: (1129, 181)->(922, 147), resolution: (1440, 3200)=>(1176, 2480)
+[10:00:58][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:00:59][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.8, result={'result': (660, 1407), 'rectangle': ((503, 1382.96), (503, 1431.96), (818, 1431.96), (818, 1382.96)), 'confidence': 0.7238461971282959}
+[10:00:59][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.82 s.
+[10:00:59][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:00:59][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.8, result={'result': (592, 1439), 'rectangle': ((131, 1366), (131, 1513), (1053, 1513), (1053, 1366)), 'confidence': 0.8382679224014282}
+[10:00:59][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.18 s.
+[10:00:59][DEBUG]<airtest.core.api> match result: {'result': (592, 1439), 'rectangle': ((131, 1366), (131, 1513), (1053, 1513), (1053, 1366)), 'confidence': 0.8382679224014282, 'time': 0.17704176902770996}
+[10:00:59][INFO]<airtest.core.api> Try finding: Template(C:\Users\74515\Desktop\UI自动化测试_体验版\login\tpl1754461722176.png)
+[10:00:59][DEBUG]<airtest.core.android.adb> C:\Users\74515\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s 6HU0222721001385 shell screencap -p
+[10:01:00][DEBUG]<airtest.core.api> resize: (47, 62)->(38, 50), resolution: (1440, 3200)=>(1176, 2480)
+[10:01:00][DEBUG]<airtest.core.api> try match with MultiScaleTemplateMatchingPre
+[10:01:00][DEBUG]<airtest.aircv.multiscale_template_matching> [MSTemplatePre] threshold=0.9, result={'result': (234, 45), 'rectangle': ((219.79200000000003, 26), (219.79200000000003, 65), (249.79200000000003, 65), (249.79200000000003, 26)), 'confidence': 0.5432061553001404}
+[10:01:00][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.02 s.
+[10:01:00][DEBUG]<airtest.core.api> try match with TemplateMatching
+[10:01:00][DEBUG]<airtest.aircv.template_matching> [Template] threshold=0.9, result={'result': (924, 183), 'rectangle': ((905, 158), (905, 208), (943, 208), (943, 158)), 'confidence': 0.8310898542404175}
+[10:01:00][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.11 s.
+[10:01:00][DEBUG]<airtest.core.api> try match with SIFTMatching
+[10:01:00][DEBUG]<airtest.aircv.utils> find_best_result() run time is 0.76 s.
+[10:01:00][DEBUG]<airtest.core.api> try match with BRISKMatching
+[10:01:01][DEBUG]<airtest.core.api> 'Not enough feature points in input images !'
+[10:01:01][DEBUG]<airtest.core.api> match result: None
+^C
