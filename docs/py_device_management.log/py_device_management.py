@@ -106,49 +106,64 @@ class device_management:
         touch(Template(r"tpl1762484377943.png", record_pos=(0.123, 0.873), resolution=(1176, 2480)))
         sleep(1.0)
         self.safe_touch(Template(r"tpl1762484397554.png", threshold=0.8500000000000001, record_pos=(-0.012, 0.287), resolution=(1176, 2480)))
+    def Device_details(self,type):
+        #进入空间设备       
+        if type == 1 :
+            touch(Template(r"tpl1762496491158.png", threshold=0.9500000000000002, rgb=True, target_pos=4, record_pos=(-0.063, -0.541), resolution=(1176, 2480)))
+        #进入跌倒设备 
+        elif type == 2 :
+            touch(Template(r"tpl1762860542526.png", target_pos=4, record_pos=(-0.068, -0.055), resolution=(1176, 2480)))
+
+        #进入健康设备 
+        elif type == 3 :
+            touch(Template(r"tpl1762860634356.png", target_pos=4, record_pos=(-0.094, 0.713), resolution=(1176, 2480)))
+
     # ====================添加设备=============================
     # def Add_device():
     # ====================查看设备=============================
+    #呼吸监控数据    
     def Breathe_Monitoring_Data(self):
         self.safe_touch(Template(r"tpl1761117722453.png",record_pos=(-0.385, -0.782), resolution=(1440, 3200)))
-        self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
-        self.safe_assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
+        if not self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板"):
+            assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
         self.safe_assert_not_exists(Template(r"tpl1761115577737.png", threshold=0.95, record_pos=(0.006, -0.225), resolution=(1440, 3200)), "心率数据列表")
         self.self.safe_assert_not_exists(Template(r"tpl1761115582460.png", threshold=0.99, record_pos=(0.006, 0.285), resolution=(1440, 3200)), "呼吸数据列表")
+        swipe(Template(r"tpl1762828867654.png", record_pos=(-0.302, 0.427), resolution=(1176, 2480)), vector=[-0.027, -0.4522])
+
         self.safe_assert_not_exists(Template(r"tpl1761115587330.png", threshold=0.95, record_pos=(0.008, 0.795), resolution=(1440, 3200)), "体动数据列表")
-        
+
+    #空间监控数据    
     def Space_Monitoring_Data(self):
         self.safe_touch(Template(r"tpl1761117722453.png",record_pos=(-0.385, -0.782), resolution=(1440, 3200)))
-        self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
-        self.safe_assert_not_exists(Template(r"tpl1762763738068.png", threshold=0.9500000000000002, record_pos=(0.01, -0.191), resolution=(1176, 2480)), "目标数量数据列表")
+        if not self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板"):
+            assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
+        assert_not_exists(Template(r"tpl1762828775038.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.004, -0.179), resolution=(1176, 2480)), "目标距离数据列表")
+        assert_not_exists(Template(r"tpl1762828781118.png", threshold=0.9500000000000002, rgb=True, target_pos=5, record_pos=(0.008, 0.063), resolution=(1176, 2480)), "目标距离数据列表")
 
-    
+    #跌倒监控数据
     def Fall_Monitoring_Data(self):
         self.safe_touch(Template(r"tpl1761117722453.png",record_pos=(-0.385, -0.782), resolution=(1440, 3200)))
-        self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
-        self.safe_assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
-        self.safe_assert_not_exists(Template(r"tpl1762763282397.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.009, -0.185), resolution=(1176, 2480)), "目标距离数据列表")
+        if not self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板"):
+            assert_not_exists(Template(r"tpl1761115548435.png", record_pos=(0.41, -0.582), resolution=(1440, 3200)), "人体状态")
+        assert_not_exists(Template(r"tpl1762828105757.png", record_pos=(0.007, -0.19), resolution=(1176, 2480)), "目标数量数据列表")
+        assert_not_exists(Template(r"tpl1762828112438.png", record_pos=(0.001, 0.053), resolution=(1176, 2480)), "目标数量数据列表")
 
-
+    #生命监控数据
     def Life_Monitoring_Data(self,type):
-        
         if type == 1 :
             # 处理床位监护模式
             if not self.safe_assert_not_exists(Template(r"tpl1762767466459.png", record_pos=(0.42, -0.354), resolution=(1176, 2480)), "床位监护卡片"):
                 assert_not_exists(Template(r"tpl1762767455205.png", record_pos=(0.409, -0.346), resolution=(1176, 2480)), "床位监护卡片")
-
             assert_not_exists(Template(r"tpl1762767601592.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.002, 0.205), resolution=(1176, 2480)), "呼吸数据列表")
             swipe(Template(r"tpl1762767690028.png", record_pos=(-0.306, 0.011), resolution=(1176, 2480)), vector=[-0.018, -0.1582])
-
             assert_not_exists(Template(r"tpl1762767622153.png", threshold=0.9500000000000002, rgb=True, target_pos=5, record_pos=(0.004, 0.388), resolution=(1176, 2480)), "心率数据列表")
             swipe(Template(r"tpl1762767708892.png", record_pos=(-0.303, 0.202), resolution=(1176, 2480)), vector=[-0.0024, -0.3026])
-
             assert_not_exists(Template(r"tpl1762767634120.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.003, 0.661), resolution=(1176, 2480)), "目标数量列表")
 
         elif type == 2 :
             # 处理人员跟踪模式
-            self.safe_assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
-            self.safe_assert_not_exists(Template(r"tpl1762763738068.png", threshold=0.9500000000000002, record_pos=(0.01, -0.191), resolution=(1176, 2480)), "目标数量数据列表")
+            assert_not_exists(Template(r"tpl1761115543262.png", record_pos=(0.421, -0.651), resolution=(1440, 3200)), "设备数据看板")
+            assert_not_exists(Template(r"tpl1762763738068.png", threshold=0.9500000000000002, record_pos=(0.01, -0.191), resolution=(1176, 2480)), "目标数量数据列表")
             
         elif type == 3 or type == "oxygen_saturation":
             # 处理跌倒监测模式
@@ -159,27 +174,157 @@ class device_management:
             # 处理呼吸睡眠模式
             if not self.safe_assert_not_exists(Template(r"tpl1762767466459.png", record_pos=(0.42, -0.354), resolution=(1176, 2480)), "床位监护卡片"):
                 assert_not_exists(Template(r"tpl1762767455205.png", record_pos=(0.409, -0.346), resolution=(1176, 2480)), "床位监护卡片")
-
             assert_not_exists(Template(r"tpl1762767601592.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.002, 0.205), resolution=(1176, 2480)), "呼吸数据列表")
             swipe(Template(r"tpl1762767690028.png", record_pos=(-0.306, 0.011), resolution=(1176, 2480)), vector=[-0.018, -0.1582])
-
             assert_not_exists(Template(r"tpl1762767622153.png", threshold=0.9500000000000002, rgb=True, target_pos=5, record_pos=(0.004, 0.388), resolution=(1176, 2480)), "心率数据列表")
             swipe(Template(r"tpl1762767708892.png", record_pos=(-0.303, 0.202), resolution=(1176, 2480)), vector=[-0.0024, -0.3026])
-
             assert_not_exists(Template(r"tpl1762767634120.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.003, 0.661), resolution=(1176, 2480)), "目标数量列表")
             
         else:
-            raise ValueError(f"不支持的数据类型: {type}，支持的类型有: 1/2/3/4 或 'heart_rate'/'blood_pressure'/'oxygen_saturation'/'body_temperature'")
-            
-            
+            raise ValueError(f"不支持的数据类型: {type}，支持的类型有: 1/2/3/4 ")
+
+    #基础配置
+    def Basic_configuration(self,type):
+        touch(Template(r"tpl1762855540830.png", record_pos=(-0.42, -0.584), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762839767822.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.009, -0.305), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762839783894.png", threshold=0.9500000000000002, record_pos=(-0.005, 0.747), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762839791836.png", record_pos=(0.411, 0.308), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762840018052.png", threshold=0.9500000000000002, target_pos=3, record_pos=(-0.043, -0.136), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762839912649.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.04, 0.034), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850327346.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.034, 0.173), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850349780.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.001, 0.309), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762850366383.png", record_pos=(0.003, 0.754), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850372211.png", record_pos=(0.414, 0.31), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850402983.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.007, 0.449), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850423614.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.094, 0.583), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850439877.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.011, 0.726), resolution=(1176, 2480)))
+        swipe(Template(r"tpl1762850462483.png", record_pos=(-0.325, 0.723), resolution=(1176, 2480)), vector=[-0.0302, -0.4822])
+        sleep(1.0)
+
+        touch(Template(r"tpl1762850562902.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.089, -0.449), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850588171.png", record_pos=(-0.005, -0.315), resolution=(1176, 2480)))
+        sleep(3.0)
+
+        touch(Template(r"tpl1762852743342.png", threshold=0.9500000000000002, target_pos=8, record_pos=(0.004, 0.429), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762850372211.png", record_pos=(0.414, 0.31), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762850619834.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.065, -0.109), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850640270.png", threshold=0.95, target_pos=6, record_pos=(-0.014, 0.092), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850659608.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.01, 0.293), resolution=(1176, 2480)))
+
+        sleep(1.0)
+
+        touch(Template(r"tpl1762850694290.png", threshold=0.9000000000000001, target_pos=8, record_pos=(0.0, 0.697), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850682982.png", record_pos=(0.42, 0.311), resolution=(1176, 2480)))
+        assert_exists(Template(r"tpl1762852360352.png", threshold=0.9500000000000002, record_pos=(-0.003, 0.392), resolution=(1176, 2480)), "姿态检测联动")
+
+
+        touch(Template(r"tpl1762850796469.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.044, 0.288), resolution=(1176, 2480)))
+        swipe(Template(r"tpl1762850914101.png", record_pos=(-0.31, 0.582), resolution=(1176, 2480)), vector=[-0.047, -0.4659])
+
+
+        touch(Template(r"tpl1762850811821.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.037, 0.491), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850824128.png", record_pos=(-0.012, 0.69), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762850838183.png", record_pos=(0.0, 0.855), resolution=(1176, 2480)))
+        keyevent("back")
+        touch(Template(r"tpl1762860866672.png", record_pos=(0.001, 0.86), resolution=(1176, 2480)))
+        assert_exists(Template(r"tpl1762858868370.png", record_pos=(0.007, -0.438), resolution=(1176, 2480)), "保存成功弹窗")
+        keyevent("back")
+        self.Device_details(tpye)
+
+
+    #通话配置
+    def Call_configuration(self):
+        touch(Template(r"tpl1762855655217.png", threshold=0.9500000000000002, target_pos=4, record_pos=(-0.173, -0.58), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762855684732.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.013, -0.448), resolution=(1176, 2480)))
+        for i in range(11):
+            keyevent("KEYCODE_DEL")
+        text("17622222222")
+        touch(Template(r"tpl1762855772721.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.005, -0.311), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762855790667.png", threshold=0.8500000000000001, target_pos=2, record_pos=(0.004, 0.612), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762858282599.png", record_pos=(0.422, 0.31), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762858305005.png", threshold=0.95, target_pos=6, record_pos=(-0.014, -0.171), resolution=(1176, 2480)))
+        text("17633333333")
+        touch(Template(r"tpl1762858808436.png", record_pos=(0.003, 0.861), resolution=(1176, 2480)))
+        assert_exists(Template(r"tpl1762858868370.png", record_pos=(0.007, -0.438), resolution=(1176, 2480)), "保存成功弹窗")
+        keyevent("back")
+
+
         
-        self.safe_assert_not_exists(Template(r"tpl1762763282397.png", threshold=0.9500000000000002, rgb=True, record_pos=(0.009, -0.185), resolution=(1176, 2480)), "目标距离数据列表")
 
 
-    def Device_Configuration(self):
+
+        
+
+
+
+
+
+        
+
+
+    #设备配置
+    def Device_Configuration(self,type):
+        sleep(1.0)
+
         self.safe_touch(Template(r"tpl1761117771638.png",record_pos=(-0.153, -0.783), resolution=(1440, 3200)))
         assert_exists(Template(r"tpl1761117788161.png",record_pos=(-0.119, -0.681), resolution=(1440, 3200)), "设备配置选项卡")
-        assert_exists(Template(r"tpl1761117834287.png",record_pos=(-0.001, -0.119), resolution=(1440, 3200)), "基础配置选项")
+        
+        self.Basic_configuration(type)
+        
+
+
+        
+
+        
+
+
+
+
+
+
+
+        touch(Template(r"tpl1762850759164.png", threshold=0.9000000000000001, target_pos=8, record_pos=(-0.004, 0.427), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762850682982.png", record_pos=(0.42, 0.311), resolution=(1176, 2480)))        
+        touch(Template(r"tpl1762850796469.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.044, 0.288), resolution=(1176, 2480)))
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
         touch(Template(r"tpl1761117842247.png",record_pos=(-0.276, -0.675), resolution=(1440, 3200)))
         assert_exists(Template(r"tpl1761117851971.png", record_pos=(0.002, -0.483), resolution=(1440, 3200)), "通话配置选项")
         touch(Template(r"tpl1761117895103.png",
@@ -192,6 +337,7 @@ class device_management:
         assert_exists(Template(r"tpl1761117942915.png", record_pos=(0.001, -0.554), resolution=(1440, 3200)), "时段配置选项")
         assert_exists(Template(r"tpl1761117961408.png",record_pos=(-0.003, 0.981), resolution=(1440, 3200)), "保存设备配置按钮")
 
+    #设备自动化
     def Equipment_Automation(self):
         self.safe_touch(Template(r"tpl1761118106593.png", record_pos=(0.097, -0.781), resolution=(1440, 3200)))
         assert_exists(Template(r"tpl1761118152074.png",record_pos=(-0.008, 0.127), resolution=(1440, 3200)), "自动化空场景")
@@ -258,34 +404,38 @@ class device_management:
         assert_exists(Template(r"tpl1761210494090.png",record_pos=(-0.005, -0.153), resolution=(1440, 3200)), "网络信息")
         touch(Template(r"tpl1761275707693.png", threshold=0.8500000000000001,target_pos=6, record_pos=(-0.006, -0.151), resolution=(1440, 3200)))
 
-
-
-        
-    def View_respiratory_equipment(self):
-        # 呼吸设备
-
+    # ====================设备类型=============================
+    # 空间设备
+    def View_space_equipment(self):
         touch(Template(r"tpl1762496491158.png", threshold=0.9500000000000002, rgb=True, target_pos=4, record_pos=(-0.063, -0.541), resolution=(1176, 2480)))
-
+        self.Space_Monitoring_Data()
+        self.Device_Configuration()
+        self.Equipment_Automation()
+    # 跌倒设备
+    def View_fall_equipment(self):
+        touch(Template(r"tpl1762496491158.png", threshold=0.9500000000000002, rgb=True, target_pos=4, record_pos=(-0.063, -0.541), resolution=(1176, 2480)))
         self.Monitoring_Data()
         self.Device_Configuration()
         self.Equipment_Automation()
+    # 健康设备
+    def View_health_equipment(self,type):
+        self.Device_details(type)
+#         self.Life_Monitoring_Data(3)
+        self.Device_Configuration(type)
+#         self.Device_Configuration()
+#         self.Equipment_Automation()
 
-    
+        
+    # ====================测试入口=============================
     def run_all_tests(self):
         """运行所有测试流程"""
         try:
 #             self.start_check()
 #             self.Device_Page()
-            self.Life_Monitoring_Data(3)
-
-            print("开始执行退出登录测试...")
-
-            print("所有测试执行完成！")
-              
+            self.View_health_equipment(3)
         finally:
         # 生成报告
              self.generate_report()
-    
 
     def generate_report(self):
 
@@ -320,4 +470,5 @@ if __name__ == "__main__":
 # assert_not_exists(Template(r"tpl1761115577737.png", threshold=0.9, record_pos=(0.006, -0.225), resolution=(1440, 3200)), "心率数据列表")
 # assert_not_exists(Template(r"tpl1761115582460.png", threshold=0.9, record_pos=(0.006, 0.285), resolution=(1440, 3200)), "呼吸数据列表")
 # assert_not_exists(Template(r"tpl1761115587330.png", threshold=0.9, record_pos=(0.008, 0.795), resolution=(1440, 3200)), "体动数据列表")
+
 
