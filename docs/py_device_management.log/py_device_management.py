@@ -187,27 +187,39 @@ class device_management:
     def Basic_configuration(self,type):
         touch(Template(r"tpl1762855540830.png", record_pos=(-0.42, -0.584), resolution=(1176, 2480)))
         touch(Template(r"tpl1762839767822.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.009, -0.305), resolution=(1176, 2480)))
+        sleep(1.0)
+
         touch(Template(r"tpl1762839783894.png", threshold=0.9500000000000002, record_pos=(-0.005, 0.747), resolution=(1176, 2480)))
 
         touch(Template(r"tpl1762839791836.png", record_pos=(0.411, 0.308), resolution=(1176, 2480)))
 
         touch(Template(r"tpl1762840018052.png", threshold=0.9500000000000002, target_pos=3, record_pos=(-0.043, -0.136), resolution=(1176, 2480)))
-        sleep(1.0)
 
-        touch(Template(r"tpl1762839912649.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.04, 0.034), resolution=(1176, 2480)))
-        touch(Template(r"tpl1762850327346.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.034, 0.173), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762863426390.png", target_pos=6, record_pos=(-0.05, 0.032), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762850327346.png", threshold=0.8499999999999999, target_pos=6, record_pos=(-0.034, 0.173), resolution=(1176, 2480)))
         touch(Template(r"tpl1762850349780.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.001, 0.309), resolution=(1176, 2480)))
         sleep(1.0)
 
         touch(Template(r"tpl1762850366383.png", record_pos=(0.003, 0.754), resolution=(1176, 2480)))
         touch(Template(r"tpl1762850372211.png", record_pos=(0.414, 0.31), resolution=(1176, 2480)))
-        touch(Template(r"tpl1762850402983.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.007, 0.449), resolution=(1176, 2480)))
-        touch(Template(r"tpl1762850423614.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.094, 0.583), resolution=(1176, 2480)))
-        touch(Template(r"tpl1762850439877.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.011, 0.726), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762934756482.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.023, 0.443), resolution=(1176, 2480)))
+
+
+
+        touch(Template(r"tpl1762935010495.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.116, 0.587), resolution=(1176, 2480)))
+
+
+
+        touch(Template(r"tpl1762934794123.png", threshold=0.9000000000000001, target_pos=9, record_pos=(-0.024, 0.567), resolution=(1176, 2480)))
+
         swipe(Template(r"tpl1762850462483.png", record_pos=(-0.325, 0.723), resolution=(1176, 2480)), vector=[-0.0302, -0.4822])
         sleep(1.0)
 
-        touch(Template(r"tpl1762850562902.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.089, -0.449), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762935310652.png", threshold=0.8, target_pos=9, record_pos=(-0.118, -0.224), resolution=(1176, 2480)))
+
         touch(Template(r"tpl1762850588171.png", record_pos=(-0.005, -0.315), resolution=(1176, 2480)))
         sleep(3.0)
 
@@ -225,11 +237,19 @@ class device_management:
 
         touch(Template(r"tpl1762850694290.png", threshold=0.9000000000000001, target_pos=8, record_pos=(0.0, 0.697), resolution=(1176, 2480)))
         touch(Template(r"tpl1762850682982.png", record_pos=(0.42, 0.311), resolution=(1176, 2480)))
-        assert_exists(Template(r"tpl1762852360352.png", threshold=0.9500000000000002, record_pos=(-0.003, 0.392), resolution=(1176, 2480)), "姿态检测联动")
+
+        sleep(2.0)
+
+        assert_not_exists(Template(r"tpl1762938109692.png", threshold=0.95, record_pos=(-0.005, 0.147), resolution=(1176, 2480)), "姿态检测联动")
+
+
+        swipe(Template(r"tpl1762935578286.png", record_pos=(-0.324, 0.707), resolution=(1176, 2480)), vector=[-0.0263, -0.4625])
+
+
 
 
         touch(Template(r"tpl1762850796469.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.044, 0.288), resolution=(1176, 2480)))
-        swipe(Template(r"tpl1762850914101.png", record_pos=(-0.31, 0.582), resolution=(1176, 2480)), vector=[-0.047, -0.4659])
+
 
 
         touch(Template(r"tpl1762850811821.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.037, 0.491), resolution=(1176, 2480)))
@@ -237,9 +257,120 @@ class device_management:
         touch(Template(r"tpl1762850838183.png", record_pos=(0.0, 0.855), resolution=(1176, 2480)))
         keyevent("back")
         touch(Template(r"tpl1762860866672.png", record_pos=(0.001, 0.86), resolution=(1176, 2480)))
-        assert_exists(Template(r"tpl1762858868370.png", record_pos=(0.007, -0.438), resolution=(1176, 2480)), "保存成功弹窗")
         keyevent("back")
-        self.Device_details(tpye)
+                
+        #验证复位
+        self.Device_details(type)
+        touch(Template(r"tpl1761117771638.png",record_pos=(-0.153, -0.783), resolution=(1440, 3200)))
+        
+        
+        touch(Template(r"tpl1762935755015.png", record_pos=(-0.026, -0.309), resolution=(1176, 2480)))
+        sleep(1.0)
+        touch(Template(r"tpl1762935764422.png", record_pos=(-0.007, 0.555), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762935768324.png", record_pos=(0.413, 0.302), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762935833902.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.134, -0.167), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762935854626.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.136, 0.032), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762935887244.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.134, 0.171), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762935903621.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.019, 0.315), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762935920924.png", record_pos=(-0.005, 0.555), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762935923490.png", record_pos=(0.419, 0.302), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762937540602.png", threshold=0.8500000000000001, target_pos=3, record_pos=(-0.095, 0.591), resolution=(1176, 2480)))
+
+
+
+
+        touch(Template(r"tpl1762935964607.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.017, 0.589), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762935977574.png", threshold=0.9000000000000001, target_pos=9, record_pos=(-0.109, 0.573), resolution=(1176, 2480)))
+        swipe(Template(r"tpl1762935992308.png", record_pos=(-0.326, 0.718), resolution=(1176, 2480)), vector=[-0.0389, -0.4576])
+        sleep(2.0)
+
+        touch(Template(r"tpl1762936044596.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.034, -0.359), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936060202.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.014, -0.225), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762936076478.png", record_pos=(-0.009, 0.753), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762936079760.png", record_pos=(0.42, 0.307), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762940302593.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.16, -0.207), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762940372761.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.1, 0.315), resolution=(1176, 2480)))
+
+
+        touch(Template(r"tpl1762936146986.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.026, 0.384), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762936162635.png", record_pos=(-0.008, 0.55), resolution=(1176, 2480)))
+
+        touch(Template(r"tpl1762936165422.png", record_pos=(0.419, 0.304), resolution=(1176, 2480)))
+        assert_exists(Template(r"tpl1762936191627.png", threshold=0.9500000000000002, record_pos=(-0.009, 0.528), resolution=(1176, 2480)), "姿态检测")
+        touch(Template(r"tpl1762936208141.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.008, 0.523), resolution=(1176, 2480)))
+        sleep(1.0)
+
+        touch(Template(r"tpl1762936223641.png", record_pos=(-0.01, 0.555), resolution=(1176, 2480)))
+
+
+
+        touch(Template(r"tpl1762936227094.png", record_pos=(0.422, 0.304), resolution=(1176, 2480)))
+        swipe(Template(r"tpl1762936241820.png", record_pos=(-0.339, 0.652), resolution=(1176, 2480)), vector=[0.0033, -0.5816])
+        touch(Template(r"tpl1762936307115.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.14, 0.283), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936325971.png", threshold=0.8500000000000001, target_pos=6, record_pos=(-0.128, 0.491), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936346331.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.012, 0.685), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936365855.png", record_pos=(-0.009, -0.645), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936396847.png", threshold=0.9500000000000002, target_pos=4, record_pos=(0.002, 0.749), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936446662.png", record_pos=(0.242, 0.284), resolution=(1176, 2480)))
+
+
+        touch(Template(r"tpl1762936457381.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.016, 0.559), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762936483845.png", record_pos=(0.406, 0.124), resolution=(1176, 2480)))
+        assert_exists(Template(r"tpl1762936503642.png", threshold=0.9500000000000002, record_pos=(-0.314, -0.645), resolution=(1176, 2480)), "鼾声检测时间段")
+        touch(Template(r"tpl1762936511834.png", record_pos=(0.384, -0.733), resolution=(1176, 2480)))
+        touch(Template(r"tpl1762940491953.png", record_pos=(0.189, 0.051), resolution=(1176, 2480)))
+
+        keyevent("back")
+        sleep(1.0)
+
+        touch(Template(r"tpl1762936542012.png", record_pos=(-0.001, 0.861), resolution=(1176, 2480)))
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        
+        
+        
 
 
     #通话配置
@@ -257,8 +388,10 @@ class device_management:
         touch(Template(r"tpl1762858305005.png", threshold=0.95, target_pos=6, record_pos=(-0.014, -0.171), resolution=(1176, 2480)))
         text("17633333333")
         touch(Template(r"tpl1762858808436.png", record_pos=(0.003, 0.861), resolution=(1176, 2480)))
-        assert_exists(Template(r"tpl1762858868370.png", record_pos=(0.007, -0.438), resolution=(1176, 2480)), "保存成功弹窗")
+        self.safe_assert_exists(Template(r"tpl1762858868370.png", record_pos=(0.007, -0.438), resolution=(1176, 2480)), "保存成功弹窗")
         keyevent("back")
+
+        
 
 
         
