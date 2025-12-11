@@ -249,9 +249,6 @@ class device_management:
 
 
         touch(Template(r"tpl1762850796469.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.044, 0.288), resolution=(1176, 2480)))
-
-
-
         touch(Template(r"tpl1762850811821.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.037, 0.491), resolution=(1176, 2480)))
         touch(Template(r"tpl1762850824128.png", record_pos=(-0.012, 0.69), resolution=(1176, 2480)))
         touch(Template(r"tpl1762850838183.png", record_pos=(0.0, 0.855), resolution=(1176, 2480)))
@@ -305,6 +302,8 @@ class device_management:
         touch(Template(r"tpl1762936162635.png", record_pos=(-0.008, 0.55), resolution=(1176, 2480)))
 
         touch(Template(r"tpl1762936165422.png", record_pos=(0.419, 0.304), resolution=(1176, 2480)))
+        swipe(Template(r"tpl1763019796525.png", record_pos=(-0.328, 0.662), resolution=(1176, 2480)), vector=[0.016, -0.3836])
+
         assert_exists(Template(r"tpl1762936191627.png", threshold=0.9500000000000002, record_pos=(-0.009, 0.528), resolution=(1176, 2480)), "姿态检测")
         touch(Template(r"tpl1762936208141.png", threshold=0.9000000000000001, target_pos=6, record_pos=(-0.008, 0.523), resolution=(1176, 2480)))
         sleep(1.0)
@@ -372,7 +371,7 @@ class device_management:
         
         
 
-
+        text("17660700727")
     #通话配置
     def Call_configuration(self):
         touch(Template(r"tpl1762855655217.png", threshold=0.9500000000000002, target_pos=4, record_pos=(-0.173, -0.58), resolution=(1176, 2480)))
@@ -380,6 +379,7 @@ class device_management:
         for i in range(11):
             keyevent("KEYCODE_DEL")
         text("17622222222")
+
         touch(Template(r"tpl1762855772721.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.005, -0.311), resolution=(1176, 2480)))
         sleep(1.0)
 

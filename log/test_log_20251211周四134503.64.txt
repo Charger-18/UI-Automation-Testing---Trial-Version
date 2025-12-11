@@ -1,0 +1,108 @@
+[2025-12-110周四013:45:03.65] 开始执行所有测试脚本... 
+ 
+[2025-12-110周四013:45:03.65] ========== 开始执行登出测试 ========== 
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 143, in <module>
+    automation = LogoutAutomation()
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 22, in __init__
+    self.setup_device()
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 54, in setup_device
+    device_url = self.get_adb_device_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 36, in get_adb_device_url
+    raise RuntimeError("未检测到任何已连接的ADB设备")
+RuntimeError: 未检测到任何已连接的ADB设备
+ 
+[2025-12-110周四013:45:03.65] ========== 开始执行登录测试 ========== 
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\login\py_login.py", line 153, in <module>
+    automation = LoginAutomation()
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\login\py_login.py", line 23, in __init__
+    self.setup_device()
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\login\py_login.py", line 55, in setup_device
+    device_url = self.get_adb_device_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\login\py_login.py", line 37, in get_adb_device_url
+    raise RuntimeError("未检测到任何已连接的ADB设备")
+RuntimeError: 未检测到任何已连接的ADB设备
+ 
+[2025-12-110周四013:45:03.65] ========== 开始执行亲友测试 ========== 
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\friends\py_friends.py", line 180, in <module>
+    automation = FriendsAutomation()
+                 ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\friends\py_friends.py", line 22, in __init__
+    self.setup_device()
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\friends\py_friends.py", line 54, in setup_device
+    device_url = self.get_adb_device_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\friends\py_friends.py", line 36, in get_adb_device_url
+    raise RuntimeError("未检测到任何已连接的ADB设备")
+RuntimeError: 未检测到任何已连接的ADB设备
+ 
+[2025-12-110周四013:45:03.65] ========== 开始执行房间管理测试 ========== 
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Room_management\py_room.py", line 226, in <module>
+    automation = RoomAutomation()
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Room_management\py_room.py", line 26, in __init__
+    self.setup_device()
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Room_management\py_room.py", line 58, in setup_device
+    device_url = self.get_adb_device_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Room_management\py_room.py", line 42, in get_adb_device_url
+    raise RuntimeError("未检测到任何已连接的ADB设备")
+RuntimeError: 未检测到任何已连接的ADB设备
+ 
+[2025-12-110周四013:45:03.65] ========== 开始执行健康档案测试 ========== 
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Health_records\Health_records.py", line 862, in <module>
+    automation = HealthRecordsAutomation()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Health_records\Health_records.py", line 22, in __init__
+    self.setup_device()
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Health_records\Health_records.py", line 54, in setup_device
+    device_url = self.get_adb_device_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\Health_records\Health_records.py", line 36, in get_adb_device_url
+    raise RuntimeError("未检测到任何已连接的ADB设备")
+RuntimeError: 未检测到任何已连接的ADB设备
+ 
+[2025-12-110周四013:45:03.65] ========== 开始执行登出测试 ========== 
+no cmdline args
+Traceback (most recent call last):
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 143, in <module>
+    automation = LogoutAutomation()
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 22, in __init__
+    self.setup_device()
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 54, in setup_device
+    device_url = self.get_adb_device_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\74515\Desktop\UI自动化测试_体验版\logout\py_logout.py", line 36, in get_adb_device_url
+    raise RuntimeError("未检测到任何已连接的ADB设备")
+RuntimeError: 未检测到任何已连接的ADB设备
+ 
+[2025-12-110周四013:45:03.65] 所有测试执行完成 
+[2025-12-110周四013:45:03.65] ========== 第二步：自动检查测试报告 ========== 
+[2025/12/11 周四 13:45:17.24] 开始自动检查测试报告...
+正在检查报告目录: C:\Users\74515\Desktop\UI自动化测试_体验版\docs
+ 存在失败的测试报告，请查看详细日志
+
+详细日志文件: C:\Users\74515\Desktop\UI自动化测试_体验版\log\report_check_20251211_134517.log
+
+ 
+========== 测试流程总结 ========== 
+完成时间: 2025/12/11 周四 13:45:17.75 
+日志文件: C:\Users\74515\Desktop\UI自动化测试_体验版\log\test_log_20251211周四134503.64.txt 
+报告目录: C:\Users\74515\Desktop\UI自动化测试_体验版\report 
+ 测试流程存在问题，请检查日志 
+========== 自动提交 docs 到 GitHub ========== 
+fatal: unable to access 'https://github.com/Charger-18/UI-Automation-Testing---Trial-Version/': Recv failure: Connection was reset
