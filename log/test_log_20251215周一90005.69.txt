@@ -1,6 +1,6 @@
-[2025-12-120ÖÜÎå011:17:44.31] ¿ªÊ¼Ö´ĞĞËùÓĞ²âÊÔ½Å±¾... 
+[2025-12-150ÖÜÒ»009:00:05.69] ¿ªÊ¼Ö´ĞĞËùÓĞ²âÊÔ½Å±¾... 
  
-[2025-12-120ÖÜÎå011:17:44.31] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\logout\py_logout.py", line 143, in <module>
@@ -15,7 +15,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2025-12-120ÖÜÎå011:17:44.31] ========== ¿ªÊ¼Ö´ĞĞµÇÂ¼²âÊÔ ========== 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== ¿ªÊ¼Ö´ĞĞµÇÂ¼²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\login\py_login.py", line 153, in <module>
@@ -30,7 +30,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2025-12-120ÖÜÎå011:17:44.31] ========== ¿ªÊ¼Ö´ĞĞÇ×ÓÑ²âÊÔ ========== 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== ¿ªÊ¼Ö´ĞĞÇ×ÓÑ²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\friends\py_friends.py", line 180, in <module>
@@ -45,7 +45,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2025-12-120ÖÜÎå011:17:44.31] ========== ¿ªÊ¼Ö´ĞĞ·¿¼ä¹ÜÀí²âÊÔ ========== 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== ¿ªÊ¼Ö´ĞĞ·¿¼ä¹ÜÀí²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\Room_management\py_room.py", line 226, in <module>
@@ -60,7 +60,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2025-12-120ÖÜÎå011:17:44.31] ========== ¿ªÊ¼Ö´ĞĞ½¡¿µµµ°¸²âÊÔ ========== 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== ¿ªÊ¼Ö´ĞĞ½¡¿µµµ°¸²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\Health_records\Health_records.py", line 862, in <module>
@@ -75,7 +75,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2025-12-120ÖÜÎå011:17:44.31] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\logout\py_logout.py", line 143, in <module>
@@ -90,30 +90,21 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2025-12-120ÖÜÎå011:17:44.31] ËùÓĞ²âÊÔÖ´ĞĞÍê³É 
-[2025-12-120ÖÜÎå011:17:44.31] ========== µÚ¶ş²½£º×Ô¶¯¼ì²é²âÊÔ±¨¸æ ========== 
-[2025/12/12 ÖÜÎå 11:17:49.24] ¿ªÊ¼×Ô¶¯¼ì²é²âÊÔ±¨¸æ...
+[2025-12-150ÖÜÒ»009:00:05.69] ËùÓĞ²âÊÔÖ´ĞĞÍê³É 
+[2025-12-150ÖÜÒ»009:00:05.69] ========== µÚ¶ş²½£º×Ô¶¯¼ì²é²âÊÔ±¨¸æ ========== 
+[2025/12/15 ÖÜÒ»  9:00:38.84] ¿ªÊ¼×Ô¶¯¼ì²é²âÊÔ±¨¸æ...
 ÕıÔÚ¼ì²é±¨¸æÄ¿Â¼: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\docs
  ´æÔÚÊ§°ÜµÄ²âÊÔ±¨¸æ£¬Çë²é¿´ÏêÏ¸ÈÕÖ¾
 
-ÏêÏ¸ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\report_check_20251212_111749.log
+ÏêÏ¸ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\report_check_20251215_090038.log
 
  
 ========== ²âÊÔÁ÷³Ì×Ü½á ========== 
-Íê³ÉÊ±¼ä: 2025/12/12 ÖÜÎå 11:17:49.67 
-ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\test_log_20251212ÖÜÎå111744.31.txt 
+Íê³ÉÊ±¼ä: 2025/12/15 ÖÜÒ»  9:00:39.78 
+ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\test_log_20251215ÖÜÒ»90005.69.txt 
 ±¨¸æÄ¿Â¼: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\report 
  ²âÊÔÁ÷³Ì´æÔÚÎÊÌâ£¬Çë¼ì²éÈÕÖ¾ 
 ========== ×Ô¶¯Ìá½» docs µ½ GitHub ========== 
 From https://github.com/Charger-18/UI-Automation-Testing---Trial-Version
  * branch            main       -> FETCH_HEAD
 Already up to date.
-warning: in the working copy of 'log/test_log_20251212å‘¨äº”90001.40.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'log/test_log_20251212å‘¨äº”111744.31.txt', LF will be replaced by CRLF the next time Git touches it
-[main 482ee00] è‡ªåŠ¨åŒ–æµ‹è¯•å®Œæˆ 2025-12-12 å‘¨äº” 11:17:51
- 3 files changed, 174 insertions(+)
- create mode 100644 log/report_check_20251212_111749.log
- create mode 100644 "log/test_log_20251212\345\221\250\344\272\224111744.31.txt"
-To https://github.com/Charger-18/UI-Automation-Testing---Trial-Version
-   1c01065..482ee00  main -> main
- docs ÒÑ×Ô¶¯Ìá½»µ½ GitHub 
