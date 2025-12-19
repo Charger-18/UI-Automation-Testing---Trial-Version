@@ -605,3 +605,4 @@ if __name__ == "__main__":
 # assert_not_exists(Template(r"tpl1761115587330.png", threshold=0.9, record_pos=(0.008, 0.795), resolution=(1440, 3200)), "体动数据列表")
 
 
+driver.get("Write your test web address!")
