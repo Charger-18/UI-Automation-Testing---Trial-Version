@@ -434,30 +434,7 @@ class device_management:
         touch(Template(r"tpl1762850682982.png", record_pos=(0.42, 0.311), resolution=(1176, 2480)))        
         touch(Template(r"tpl1762850796469.png", threshold=0.9500000000000002, target_pos=6, record_pos=(-0.044, 0.288), resolution=(1176, 2480)))
 
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
+      
         touch(Template(r"tpl1761117842247.png",record_pos=(-0.276, -0.675), resolution=(1440, 3200)))
         assert_exists(Template(r"tpl1761117851971.png", record_pos=(0.002, -0.483), resolution=(1440, 3200)), "通话配置选项")
         touch(Template(r"tpl1761117895103.png",
