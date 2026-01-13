@@ -1,6 +1,6 @@
-[2026-01-050ÖÜÒ»009:00:40.91] ¿ªÊ¼Ö´ĞĞËùÓĞ²âÊÔ½Å±¾... 
+[2026-01-130ÖÜ¶ş009:10:21.74] ¿ªÊ¼Ö´ĞĞËùÓĞ²âÊÔ½Å±¾... 
  
-[2026-01-050ÖÜÒ»009:00:40.91] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\logout\py_logout.py", line 143, in <module>
@@ -15,7 +15,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2026-01-050ÖÜÒ»009:00:40.91] ========== ¿ªÊ¼Ö´ĞĞµÇÂ¼²âÊÔ ========== 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== ¿ªÊ¼Ö´ĞĞµÇÂ¼²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\login\py_login.py", line 153, in <module>
@@ -30,7 +30,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2026-01-050ÖÜÒ»009:00:40.91] ========== ¿ªÊ¼Ö´ĞĞÇ×ÓÑ²âÊÔ ========== 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== ¿ªÊ¼Ö´ĞĞÇ×ÓÑ²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\friends\py_friends.py", line 180, in <module>
@@ -45,7 +45,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2026-01-050ÖÜÒ»009:00:40.91] ========== ¿ªÊ¼Ö´ĞĞ·¿¼ä¹ÜÀí²âÊÔ ========== 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== ¿ªÊ¼Ö´ĞĞ·¿¼ä¹ÜÀí²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\Room_management\py_room.py", line 226, in <module>
@@ -60,7 +60,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2026-01-050ÖÜÒ»009:00:40.91] ========== ¿ªÊ¼Ö´ĞĞ½¡¿µµµ°¸²âÊÔ ========== 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== ¿ªÊ¼Ö´ĞĞ½¡¿µµµ°¸²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\Health_records\Health_records.py", line 862, in <module>
@@ -75,7 +75,7 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2026-01-050ÖÜÒ»009:00:40.91] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== ¿ªÊ¼Ö´ĞĞµÇ³ö²âÊÔ ========== 
 no cmdline args
 Traceback (most recent call last):
   File "C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\logout\py_logout.py", line 143, in <module>
@@ -90,28 +90,21 @@ Traceback (most recent call last):
     raise RuntimeError("Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸")
 RuntimeError: Î´¼ì²âµ½ÈÎºÎÒÑÁ¬½ÓµÄADBÉè±¸
  
-[2026-01-050ÖÜÒ»009:00:40.91] ËùÓĞ²âÊÔÖ´ĞĞÍê³É 
-[2026-01-050ÖÜÒ»009:00:40.91] ========== µÚ¶ş²½£º×Ô¶¯¼ì²é²âÊÔ±¨¸æ ========== 
-[2026/01/05 ÖÜÒ»  9:00:51.30] ¿ªÊ¼×Ô¶¯¼ì²é²âÊÔ±¨¸æ...
+[2026-01-130ÖÜ¶ş009:10:21.74] ËùÓĞ²âÊÔÖ´ĞĞÍê³É 
+[2026-01-130ÖÜ¶ş009:10:21.74] ========== µÚ¶ş²½£º×Ô¶¯¼ì²é²âÊÔ±¨¸æ ========== 
+[2026/01/13 ÖÜ¶ş  9:10:30.84] ¿ªÊ¼×Ô¶¯¼ì²é²âÊÔ±¨¸æ...
 ÕıÔÚ¼ì²é±¨¸æÄ¿Â¼: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\docs
  ´æÔÚÊ§°ÜµÄ²âÊÔ±¨¸æ£¬Çë²é¿´ÏêÏ¸ÈÕÖ¾
 
-ÏêÏ¸ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\report_check_20260105_090051.log
+ÏêÏ¸ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\report_check_20260113_091030.log
 
  
 ========== ²âÊÔÁ÷³Ì×Ü½á ========== 
-Íê³ÉÊ±¼ä: 2026/01/05 ÖÜÒ»  9:00:51.83 
-ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\test_log_20260105ÖÜÒ»90040.90.txt 
+Íê³ÉÊ±¼ä: 2026/01/13 ÖÜ¶ş  9:10:32.03 
+ÈÕÖ¾ÎÄ¼ş: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\log\test_log_20260113ÖÜ¶ş91021.74.txt 
 ±¨¸æÄ¿Â¼: C:\Users\74515\Desktop\UI×Ô¶¯»¯²âÊÔ_ÌåÑé°æ\report 
  ²âÊÔÁ÷³Ì´æÔÚÎÊÌâ£¬Çë¼ì²éÈÕÖ¾ 
 ========== ×Ô¶¯Ìá½» docs µ½ GitHub ========== 
-fatal: unable to access 'https://github.com/Charger-18/UI-Automation-Testing---Trial-Version/': Recv failure: Connection was reset
-warning: in the working copy of 'log/test_log_20251229å‘¨ä¸€90001.91.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'log/test_log_20260105å‘¨ä¸€90040.90.txt', LF will be replaced by CRLF the next time Git touches it
-Auto packing the repository for optimum performance.
-See "git help gc" for manual housekeeping.
-[main 6655f2c] è‡ªåŠ¨åŒ–æµ‹è¯•å®Œæˆ 2026-01-05 å‘¨ä¸€  9:01:37
- 4 files changed, 173 insertions(+), 24 deletions(-)
- create mode 100644 log/report_check_20260105_090051.log
- create mode 100644 "log/test_log_20260105\345\221\250\344\270\20090040.90.txt"
-fatal: unable to access 'https://github.com/Charger-18/UI-Automation-Testing---Trial-Version/': Recv failure: Connection was reset
+From https://github.com/Charger-18/UI-Automation-Testing---Trial-Version
+ * branch            main       -> FETCH_HEAD
+Already up to date.
