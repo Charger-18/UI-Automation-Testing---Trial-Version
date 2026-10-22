@@ -1,9 +1,18 @@
-# Airtest ��غ�����
+# Airtest 相关忽略项
 
 
-# Python ��غ�����
+# Python 相关忽略项
 *.pyc
 venv/
 env/
 .env
 .vscode/
+
+# 每日执行产生的运行日志（不入版本库）
+log/每日执行/
+
+# 修改前的备份文件
+*.bak_*
+
+# Python 缓存
+__pycache__/
